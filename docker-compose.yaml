@@ -23,7 +23,7 @@ services:
 
   db:
     # MySQLデータベースを実行するサービス（コンテナ）の設定をします。
-    container_name: mysql_host # このサービス（コンテナ）の名前を設定します。他のサービスからこの名前でアクセスできます。
+    container_name: hirachin_host # このサービス（コンテナ）の名前を設定します。他のサービスからこの名前でアクセスできます。
     image: mysql:8.0 # 使用するDockerイメージを指定します。ここではバージョン8.0のMySQLイメージを使用します。
     platform: linux/x86_64 # このサービス（コンテナ）が動作するプラットフォームを指定します。M1 Macの場合にはこの設定が必要です。
     command: --character-set-server=utf8 --collation-server=utf8_unicode_ci --default-authentication-plugin=mysql_native_password # MySQLサーバーの起動時に実行するコマンドを設定します。ここではデフォルトの文字セットと照合順序をUTF-8に設定し、認証プラグインをmysql_native_passwordに設定しています。
@@ -51,7 +51,7 @@ services:
     environment:
       # 環境変数を設定します。
       PMA_ARBITRARY: 1 # 任意のMySQLサーバーに接続するための設定を有効にします。
-      PMA_HOST: mysql_host # phpMyAdminから接続するMySQLサーバーのホスト名を設定します。ここではdbサービスのコンテナ名を指定しています。
+      PMA_HOST: hirachin_host # phpMyAdminから接続するMySQLサーバーのホスト名を設定します。ここではdbサービスのコンテナ名を指定しています。
       PMA_USER: root # phpMyAdminからログインするときのユーザー名を設定します。ここではrootユーザーを指定しています。
 
 volumes:
