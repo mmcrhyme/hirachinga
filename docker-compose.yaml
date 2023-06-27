@@ -1,0 +1,61 @@
+version: '3' # docker-composeのバージョンを指定します。この例ではバージョン3を使用します。
+
+services:
+  # この設定ファイルで管理するサービス（コンテナ）を列挙します。
+
+  hirachin-app:
+    # FastAPIアプリケーションを実行するサービス（コンテナ）の設定をします。
+    build: . # Dockerfileのあるディレクトリを指定します。ここではカレントディレクトリ（"."）を指定しています。
+    volumes:
+      # ホストとコンテナ間でデータを共有するための設定をします。
+      - .dockervenv:/src/.venv # ホストの.dockervenvディレクトリとコンテナの/src/.venvディレクトリをマウント（同期）します。
+      - .:/src # ホストのカレントディレクトリとコンテナの/srcディレクトリをマウントします。
+    ports:
+      # ホストとコンテナ間で通信をするためのポートを開放します。
+      - 8000:8000 # ホストの8000番ポートとコンテナの8000番ポートをつなげます。この例ではFastAPIアプリケーションが8000番ポートで待ち受けるためです。
+    environment:
+      # 環境変数を設定します。
+      - WATCHFILES_FORCE_POLLING=true # FastAPIアプリケーションがファイルの変更を監視するための環境変数です。
+      - DATABASE_URL=mysql://root@db/demo # FastAPIアプリケーションがデータベースに接続するためのURLを設定します。
+    depends_on:
+      # このサービスが依存する他のサービスを指定します。この例では、dbサービスが起動してからfapi-appサービスが起動するようにします。
+      - db
+
+  db:
+    # MySQLデータベースを実行するサービス（コンテナ）の設定をします。
+    container_name: mysql_host # このサービス（コンテナ）の名前を設定します。他のサービスからこの名前でアクセスできます。
+    image: mysql:8.0 # 使用するDockerイメージを指定します。ここではバージョン8.0のMySQLイメージを使用します。
+    platform: linux/x86_64 # このサービス（コンテナ）が動作するプラットフォームを指定します。M1 Macの場合にはこの設定が必要です。
+    command: --character-set-server=utf8 --collation-server=utf8_unicode_ci --default-authentication-plugin=mysql_native_password # MySQLサーバーの起動時に実行するコマンドを設定します。ここではデフォルトの文字セットと照合順序をUTF-8に設定し、認証プラグインをmysql_native_passwordに設定しています。
+    ports:
+      - 33306:3306 # ホストの33306番ポートとコンテナの3306番ポート（MySQLのデフォルトポート）をつなげます。
+    environment:
+      # 環境変数を設定します。
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes' # rootユーザーのパスワードを設定せずにMySQLサーバーを起動します。
+      MYSQL_DATABASE: 'demo' # 初期データベースとして'demo'を作成します。
+      TZ: 'Asia/Tokyo' # タイムゾーンを日本時間に設定します。
+    volumes:
+      # ホストとコンテナ間でデータを共有するための設定をします。
+      - mysql_data:/var/lib/mysql # ホストのmysql_dataボリュームとコンテナの/var/lib/mysqlディレクトリ（MySQLのデータが保存される場所）をマウントします。
+
+  phpmyadmin:
+    # phpMyAdminを実行するサービス（コンテナ）の設定をします。
+    container_name: phpmyadmin_host # このサービス（コンテナ）の名前を設定します。
+    depends_on:
+      # このサービスが依存する他のサービスを指定します。この例では、dbサービスが起動してからphpmyadminサービスが起動するようにします。
+      - db
+    image: phpmyadmin/phpmyadmin # 使用するDockerイメージを指定します。ここではphpMyAdminの公式イメージを使用します。
+    restart: always # コンテナが停止したときに自動的に再起動します。
+    ports:
+      - "8080:80" # ホストの8080番ポートとコンテナの80番ポート（phpMyAdminのデフォルトポート）をつなげます。
+    environment:
+      # 環境変数を設定します。
+      PMA_ARBITRARY: 1 # 任意のMySQLサーバーに接続するための設定を有効にします。
+      PMA_HOST: mysql_host # phpMyAdminから接続するMySQLサーバーのホスト名を設定します。ここではdbサービスのコンテナ名を指定しています。
+      PMA_USER: root # phpMyAdminからログインするときのユーザー名を設定します。ここではrootユーザーを指定しています。
+
+volumes:
+  # ボリュームの設定をします。ボリュームはDockerコンテナのデータを保存するための領域です。
+  mysql_data:
+    # mysql_dataという名前のボリュームを作成します。dbサービスでこのボリュームを使用しています。
+
