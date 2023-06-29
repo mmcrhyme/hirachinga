@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>試しにhtmlファイル内でJSでAPI叩いてみた</title>
+</head>
+
+<body>
+    <h1 id="data">Loading...</h1>
+    <script>
+        // Fetch APIを使用して、FastAPIエンドポイントからデータを取得する
+        fetch('http://0.0.0.0:8000/')
+            .then(response => response.json())  // レスポンスをJSONとして解析する
+            .then(data => {  // 解析されたデータに対する処理を定義
+                document.getElementById('data').textContent = `Hello, ${data['Hello']}`;  // データをHTMLに表示
+            })
+            .catch((error) => {  // エラー処理
+                console.error('Error:', error);
+            });
+    </script>
+</body>
+
+</html>
