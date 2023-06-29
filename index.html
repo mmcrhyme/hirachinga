@@ -2,21 +2,51 @@
 <html>
 
 <head>
-    <title>試しにhtmlファイル内でJSでAPI叩いてみた</title>
+    <title>FastAPI Data Display</title>
 </head>
 
 <body>
-    <h1 id="data">Loading...</h1>
+    <h2>シーン2のデータをとりあえず取得してそのまま表示したった</h2>
+
+    <p>Background Image: <span id="background_image"></span></p>
+    <p>Text: <span id="text"></span></p>
+    <p>Difficulty Level ID: <span id="difficulty_level_id"></span></p>
+    <p>ID: <span id="id"></span></p>
+
+    <h2>Choices</h2>
+
+    <div id="choices">
+        <!-- 選択肢が動的に生成されます -->
+    </div>
+
     <script>
-        // Fetch APIを使用して、FastAPIエンドポイントからデータを取得する
-        fetch('http://0.0.0.0:8000/')
-            .then(response => response.json())  // レスポンスをJSONとして解析する
-            .then(data => {  // 解析されたデータに対する処理を定義
-                document.getElementById('data').textContent = `Hello, ${data['Hello']}`;  // データをHTMLに表示
+        fetch('http://0.0.0.0:8000/scenes/2', {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('background_image').textContent = data.background_image;
+                document.getElementById('text').textContent = data.text;
+                document.getElementById('difficulty_level_id').textContent = data.difficulty_level_id;
+                document.getElementById('id').textContent = data.id;
+
+                // choicesは配列なので、各選択肢をループで処理します。
+                data.choices.forEach((choice, index) => {
+                    const choiceDiv = document.createElement('div');
+                    choiceDiv.innerHTML = `
+                    <h3>Choice ${index + 1}</h3>
+                    <p>Choice Text: ${choice.choice_text}</p>
+                    <p>Scene ID: ${choice.scene_id}</p>
+                    <p>ID: ${choice.id}</p>
+                `;
+
+                    document.getElementById('choices').appendChild(choiceDiv);
+                });
             })
-            .catch((error) => {  // エラー処理
-                console.error('Error:', error);
-            });
+            .catch(error => console.error('Error:', error));
     </script>
 </body>
 

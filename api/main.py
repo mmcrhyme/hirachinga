@@ -2,8 +2,23 @@ from fastapi import FastAPI
 
 from fastapi.middleware.cors import CORSMiddleware
 
+from api.routers import user
+from api.routers import item
+from api.routers import choice
+from api.routers import progress
+from api.routers import scene
+from api.routers import difficulty_level
+from api.routers import game_session
 
 app = FastAPI()
+
+app.include_router(user.router)
+app.include_router(item.router)
+app.include_router(choice.router)
+app.include_router(progress.router)
+app.include_router(scene.router)
+app.include_router(difficulty_level.router)
+app.include_router(game_session.router)
 
 
 # CORSミドルウェアの設定
