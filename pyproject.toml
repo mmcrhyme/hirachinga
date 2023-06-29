@@ -10,6 +10,8 @@ packages = [{include = "hirachin_app"}]
 python = "^3.11"
 fastapi = "^0.98.0"
 uvicorn = {extras = ["standard"], version = "^0.22.0"}
+sqlalchemy = "^2.0.17"
+pymysql = "^1.1.0"
 
 
 [build-system]
