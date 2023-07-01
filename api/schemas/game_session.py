@@ -5,7 +5,7 @@ from .progress import Progress
 
 class GameSessionBase(BaseModel):
     user_id: int
-    difficulty_level_id: int
+    # difficulty_level_id: int
     start_time: Optional[datetime] = None
 
 class GameSessionCreate(GameSessionBase):

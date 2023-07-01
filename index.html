@@ -9,13 +9,18 @@
     <h2>シーン2のデータをとりあえず取得してそのまま表示したった</h2>
 
     <p>Background Image: <span id="background_image"></span></p>
-    <p>Text: <span id="text"></span></p>
     <p>Difficulty Level ID: <span id="difficulty_level_id"></span></p>
     <p>ID: <span id="id"></span></p>
+    <!-- <p>Text: <span id="text"></span></p> -->
 
-    <h2>Choices</h2>
+    <h2>選択肢s</h2>
 
     <div id="choices">
+        <!-- 選択肢が動的に生成されます -->
+    </div>
+    <h2>セリフs</h2>
+
+    <div id="texts">
         <!-- 選択肢が動的に生成されます -->
     </div>
 
@@ -29,7 +34,7 @@
             .then(response => response.json())
             .then(data => {
                 document.getElementById('background_image').textContent = data.background_image;
-                document.getElementById('text').textContent = data.text;
+                // document.getElementById('text').textContent = data.text;
                 document.getElementById('difficulty_level_id').textContent = data.difficulty_level_id;
                 document.getElementById('id').textContent = data.id;
 
@@ -37,7 +42,7 @@
                 data.choices.forEach((choice, index) => {
                     const choiceDiv = document.createElement('div');
                     choiceDiv.innerHTML = `
-                    <h3>Choice ${index + 1}</h3>
+                    <h3>選択肢 ${index + 1}</h3>
                     <p>Choice Text: ${choice.choice_text}</p>
                     <p>Scene ID: ${choice.scene_id}</p>
                     <p>ID: ${choice.id}</p>
@@ -45,6 +50,19 @@
 
                     document.getElementById('choices').appendChild(choiceDiv);
                 });
+
+                data.texts.forEach((text, index) => {
+                    const textDiv = document.createElement('div');
+                    textDiv.innerHTML = `
+                    <h3>セリフ ${index + 1}</h3>
+                    <p>セリフ: ${text.text}</p>
+                    <p>Scene ID: ${text.scene_id}</p>
+                    <p>ID: ${text.id}</p>
+                `;
+
+                    document.getElementById('texts').appendChild(textDiv);
+                });
+
             })
             .catch(error => console.error('Error:', error));
     </script>
