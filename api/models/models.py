@@ -1,9 +1,9 @@
-from sqlalchemy import Boolean, Column, ForeignKey, Integer, String, DateTime, Float
+from sqlalchemy import Boolean, Column, ForeignKey, Integer, String, DateTime, Float, Table
 from sqlalchemy.orm import relationship
 from sqlalchemy.dialects.mysql import DATETIME
 from datetime import datetime
 
-from api.db import Base  # Base should be a declarative base instance from sqlalchemy.ext.declarative
+from api.db import Base  
 
 class User(Base):
     __tablename__ = "users"
@@ -13,29 +13,20 @@ class User(Base):
     email = Column(String(255), unique=True, index=True)
     password = Column(String(255))
 
-class DifficultyLevel(Base):
-    __tablename__ = "difficulty_levels"
-
-    id = Column(Integer, primary_key=True, index=True)
-    level_name = Column(String(255), index=True)
-    items = relationship("Item", backref="difficulty_level")
-    scenes = relationship("Scene", backref="difficulty_level")
-
-class Item(Base):
-    __tablename__ = "items"
-
-    id = Column(Integer, primary_key=True, index=True)
-    item_name = Column(String(255), index=True)
-    difficulty_level_id = Column(Integer, ForeignKey("difficulty_levels.id"))
-
 class Scene(Base):
     __tablename__ = "scenes"
 
     id = Column(Integer, primary_key=True, index=True)
     background_image = Column(String(255))
-    text = Column(String(255))
-    difficulty_level_id = Column(Integer, ForeignKey("difficulty_levels.id"))
     choices = relationship("Choice", backref="scene")
+    text_sets = relationship("TextSet", backref="scene")
+
+class TextSet(Base):
+    __tablename__ = "text_sets"
+
+    id = Column(Integer, primary_key=True, index=True)
+    scene_id = Column(Integer, ForeignKey("scenes.id"))
+    texts = relationship("Text", backref="text_set")
 
 class Choice(Base):
     __tablename__ = "choices"
@@ -43,13 +34,29 @@ class Choice(Base):
     id = Column(Integer, primary_key=True, index=True)
     choice_text = Column(String(255))
     scene_id = Column(Integer, ForeignKey("scenes.id"))
+    choice_text_sets = relationship("ChoiceTextSet", backref="choice")
+
+class Text(Base):
+    __tablename__ = "texts"
+
+    id = Column(Integer, primary_key=True, index=True)
+    text = Column(String(255))
+    gender = Column(String(255)) #追加
+    emotion = Column(String(255)) #追加
+    text_set_id = Column(Integer, ForeignKey("text_sets.id"))
+
+class ChoiceTextSet(Base):
+    __tablename__ = "choice_text_sets"
+
+    id = Column(Integer, primary_key=True, index=True)
+    choice_id = Column(Integer, ForeignKey("choices.id"))
+    text_set_id = Column(Integer, ForeignKey("text_sets.id"))
 
 class GameSession(Base):
     __tablename__ = "game_sessions"
 
     id = Column(Integer, primary_key=True, index=True)
     user_id = Column(Integer, ForeignKey("users.id"))
-    difficulty_level_id = Column(Integer, ForeignKey("difficulty_levels.id"))
     start_time = Column(DATETIME(fsp=6), default=datetime.utcnow)
     end_time = Column(DATETIME(fsp=6))
     progress = relationship("Progress", backref="game_session")
