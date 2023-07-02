@@ -17,7 +17,7 @@ class Scene(Base):
     __tablename__ = "scenes"
 
     id = Column(Integer, primary_key=True, index=True)
-    background_image = Column(String(255))
+    # background_image = Column(String(255)) 消した　07020226
     choices = relationship("Choice", backref="scene")
     text_sets = relationship("TextSet", backref="scene")
 
@@ -41,8 +41,12 @@ class Text(Base):
 
     id = Column(Integer, primary_key=True, index=True)
     text = Column(String(255))
+    background_image = Column(String(255)) #追加
     gender = Column(String(255)) #追加
-    emotion = Column(String(255)) #追加
+    progress = Column(Integer) #追加
+    mental = Column(Integer) #Integerに変えた
+    money = Column(Integer) #Integerに変えた
+    satisfaction = Column(Integer) #Integerに変えた
     text_set_id = Column(Integer, ForeignKey("text_sets.id"))
 
 class ChoiceTextSet(Base):
