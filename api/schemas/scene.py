@@ -4,9 +4,10 @@ from .choice import Choice
 from .text_set import TextSet
 
 class SceneBase(BaseModel):
-    background_image: str
+    # background_image: str 消した07020237
     # text: str
     # difficulty_level_id: int
+    pass
 
 class SceneCreate(SceneBase):
     pass

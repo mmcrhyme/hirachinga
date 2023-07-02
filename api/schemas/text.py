@@ -2,8 +2,12 @@ from pydantic import BaseModel
 
 class TextBase(BaseModel):
     text: str
+    background_image: str
     gender: str
-    emotion: str
+    progress: str
+    mental: str
+    money: str
+    satisfaction: str
     # scene_id: int
     text_set_id: int
 
