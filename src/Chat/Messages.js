@@ -117,7 +117,7 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 const ProgressBar = ({ progress }) => (
   <div style={{ display: 'flex', alignItems: 'center', width: '100%'}}>
-    <div style={{ fontWeight: 'bold' }}>課題進捗:{progress} %</div>
+    <div style={{ fontWeight: 'bold' }}>&nbsp;&nbsp;課題進捗:&nbsp;{progress} %&nbsp;</div>
     <progress style={{ width: '70%', height: '2em'  }} max="100" value={progress}></progress>
   </div>
 );
@@ -166,7 +166,7 @@ const Messages = ({ content }) => {
   const [money, setMoney] = useState(300);
   const [mental, setMental] = useState(50);
   const [satisfaction, setSatisfaction] = useState(50);
-  // const [backgroundImg, setBackgroundImg] = useState(null);
+  const [backgroundImage, setBackgroundImage] = useState(null);
 
   useEffect(() => {
     console.log(content);
@@ -201,11 +201,6 @@ const Messages = ({ content }) => {
     }
   }, [message]); 
 
-  // useEffect(() => {
-  //   if (message && message.background_image) {
-  //     setBackgroundImg(`.././img/scene_1/${message.background_image}`);
-  //   }
-  // }, [message]);
 
   useEffect(() => {
     if (message) {
@@ -219,9 +214,23 @@ const Messages = ({ content }) => {
   const messageBoxStyle = {
     borderColor, 
   };
+
+  useEffect(() => {
+    if (message) {
+      setBackgroundImage(message.background_image );
+    }
+  }, [message]); 
+
   const backgroundStyle = {
-    backgroundImage: `url(${backgroundImg})`,
+    backgroundImage: `url(/img/scene_1/${backgroundImage})`,
   };
+
+  // const backgroundStyle = {
+  //   backgroundImage: `url(${backgroundImg})`,
+  // };
+  useEffect(() => {
+    console.log('backgroundImage: ', backgroundImage); // 最新のbackgroundImageの値をログ出力
+  }, [backgroundImage]); 
 
 
   return (
