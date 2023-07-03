@@ -44,7 +44,7 @@ def read_scene(scene_id: int, db: Session = Depends(get_db)):
             "choice_text": choice.choice_text,
             "scene_id": choice.scene_id,
             "belong_text_set_id": choice.belong_text_set_id, # 追加
-            "text_sets_id": [text_set.id for text_set in choice.choice_text_sets],
+            "text_sets_id": [text_set.text_set_id for text_set in choice.choice_text_sets],
         }
         response["choices"].append(new_choice)
 

@@ -159,7 +159,7 @@ const Messages = ({ content }) => {
   const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
   const [isDisplayingChoices, setIsDisplayingChoices] = useState(false);
   const [currentTextSetIndex, setCurrentTextSetIndex] = useState(0);
-  const [hasDisplayedChoices, setHasDisplayedChoices] = useState(false);
+  const [currentTextSetId, setCurrentTextSetId] = useState(null); 
   const [borderColor, setBorderColor] = useState('white');
   const [progress, setProgress] = useState(0);
   const [money, setMoney] = useState(300);
@@ -174,6 +174,12 @@ const Messages = ({ content }) => {
   const handleChoiceClick = (textSetIds) => {
     const randomTextSetId = textSetIds[Math.floor(Math.random() * textSetIds.length)];
     const newTextSetIndex = content.text_sets.findIndex(text_set => text_set.id === randomTextSetId);
+
+    if (newTextSetIndex === -1) {
+      window.location.href = 'https://kgrymd.github.io/JFGame/';
+      return;
+    }
+
     setCurrentTextSetIndex(newTextSetIndex);
     setCurrentMessageIndex(0);
     setIsDisplayingChoices(false);
@@ -181,19 +187,19 @@ const Messages = ({ content }) => {
   };
 
   useEffect(() => {
-    if (currentMessageIndex < content.text_sets[currentTextSetIndex].texts.length+1) {
+    if (currentMessageIndex < content.text_sets[currentTextSetIndex].texts.length) {
       const timer = setTimeout(() => {
         setMessage(content.text_sets[currentTextSetIndex].texts[currentMessageIndex]);
         setCurrentMessageIndex(currentMessageIndex => currentMessageIndex + 1);
+        setCurrentTextSetId(content.text_sets[currentTextSetIndex].id); 
       }, 5000); 
 
       return () => clearTimeout(timer);
-    } else if (!isDisplayingChoices && !hasDisplayedChoices) {
+    } else if (!isDisplayingChoices ) {
       setChoices(content.choices);
       setIsDisplayingChoices(true);
-      setHasDisplayedChoices(true);
     }
-  }, [currentMessageIndex, isDisplayingChoices, hasDisplayedChoices, currentTextSetIndex]);
+  }, [currentMessageIndex, isDisplayingChoices, currentTextSetIndex]);
   useEffect(() => {
     if (message) {
       setBorderColor(message.gender === 'male' ? 'blue' : 'red');
@@ -240,8 +246,8 @@ const Messages = ({ content }) => {
         {message && <Message key={message.id} content={message.text}/>}
       </div>
       {isDisplayingChoices && 
-      <div className="ChoicesBox">
-          {choices.map((choice, index) =>
+        <div className="ChoicesBox">
+          {choices.filter(choice => choice.belong_text_set_id === currentTextSetId).map((choice, index) =>
             <button className="ChoiceButton" key={index} onClick={() => handleChoiceClick(choice.text_sets_id)}>{choice.choice_text}</button>
           )}
         </div>

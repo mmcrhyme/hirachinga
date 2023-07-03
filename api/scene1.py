@@ -627,9 +627,9 @@ def main():
     session.flush()
 
     # create 3 ChoiceTextSets
-    new_choice_text_set1 = ChoiceTextSet(choice_id=new_choice2.id, text_set_id=new_text_set2.id)
+    new_choice_text_set1 = ChoiceTextSet(choice_id=new_choice1.id, text_set_id=new_text_set2.id)
     new_choice_text_set2 = ChoiceTextSet(choice_id=new_choice1.id, text_set_id=new_text_set3.id)
-    new_choice_text_set3 = ChoiceTextSet(choice_id=new_choice1.id, text_set_id=new_text_set4.id)
+    new_choice_text_set3 = ChoiceTextSet(choice_id=new_choice2.id, text_set_id=new_text_set4.id)
     # new_choice_text_set4 = ChoiceTextSet(choice_id=new_choice3.id, text_set_id=new_text_set5.id)
     # new_choice_text_set5 = ChoiceTextSet(choice_id=new_choice3.id, text_set_id=new_text_set6.id)
     # new_choice_text_set6 = ChoiceTextSet(choice_id=new_choice4.id, text_set_id=new_text_set7.id)
