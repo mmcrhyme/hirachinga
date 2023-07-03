@@ -34,6 +34,7 @@ class Choice(Base):
     id = Column(Integer, primary_key=True, index=True)
     choice_text = Column(String(255))
     scene_id = Column(Integer, ForeignKey("scenes.id"))
+    belong_text_set_id = Column(Integer) # 追加
     choice_text_sets = relationship("ChoiceTextSet", backref="choice")
 
 class Text(Base):
