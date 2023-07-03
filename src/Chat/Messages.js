@@ -185,7 +185,7 @@ const Messages = ({ content }) => {
       const timer = setTimeout(() => {
         setMessage(content.text_sets[currentTextSetIndex].texts[currentMessageIndex]);
         setCurrentMessageIndex(currentMessageIndex => currentMessageIndex + 1);
-      }, 9000); 
+      }, 5000); 
 
       return () => clearTimeout(timer);
     } else if (!isDisplayingChoices && !hasDisplayedChoices) {
