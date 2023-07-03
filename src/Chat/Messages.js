@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 import backgroundImg from ".././img/scene_1/1.png";
 import "./MessagesContainer.css";
 import Scene from "./Check";
+import { FcSalesPerformance, FcLike, FcPlus } from "react-icons/fc";
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 // const content = {
 //   "background_image": "./img/scene_1/1.png",
@@ -114,16 +116,27 @@ import Scene from "./Check";
 
 
 const ProgressBar = ({ progress }) => (
-  <div style={{ display: 'flex', alignItems: 'center', width: '100%' }}>
-    <div>課題進捗:</div>
-    <progress style={{ width: '70%' }} max="100" value={progress}></progress>
+  <div style={{ display: 'flex', alignItems: 'center', width: '100%'}}>
+    <div style={{ fontWeight: 'bold' }}>課題進捗:{progress} %</div>
+    <progress style={{ width: '70%', height: '2em'  }} max="100" value={progress}></progress>
   </div>
 );
 
 
-const StatusDisplay = ({ label, value }) => (
-  <div className="status-item">
-    <div>{label}: {value}</div>
+const StatusDisplay = ({ Icon, value }) => (
+  <div className="status-item" style={{ fontSize: '2em' }}>
+    <Icon className="icon" size="2em"/>
+    <TransitionGroup>
+      {value != null && (
+        <CSSTransition
+          key={value}
+          timeout={2000}
+          classNames="fade"
+        >
+          <div className={`colorChange textGlow`}>{value}</div>
+        </CSSTransition>
+      )}
+    </TransitionGroup>
   </div>
 );
 
@@ -132,9 +145,9 @@ const Status = ({ progress, money, mental, satisfaction }) => (
   <div className="status-container">
     <ProgressBar progress={progress} />
     <div className="status-subcontainer">
-      <StatusDisplay label="Money" value={money} />
-      <StatusDisplay label="Mental" value={mental} />
-      <StatusDisplay label="Satisfaction" value={satisfaction} />
+    <StatusDisplay Icon={FcSalesPerformance} value={money} />
+    <StatusDisplay Icon={FcLike} value={mental} />
+    <StatusDisplay Icon={FcPlus} value={satisfaction} />
     </div>
   </div>
 );
