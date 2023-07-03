@@ -1,6 +1,5 @@
 import Message from "./Message";
 import React, { useState, useEffect } from "react";
-import backgroundImg from ".././img/scene_1/1.png";
 import "./MessagesContainer.css";
 import Scene from "./Check";
 import { FcSalesPerformance, FcLike, FcPlus } from "react-icons/fc";
@@ -186,7 +185,7 @@ const Messages = ({ content }) => {
       const timer = setTimeout(() => {
         setMessage(content.text_sets[currentTextSetIndex].texts[currentMessageIndex]);
         setCurrentMessageIndex(currentMessageIndex => currentMessageIndex + 1);
-      }, 3000); 
+      }, 9000); 
 
       return () => clearTimeout(timer);
     } else if (!isDisplayingChoices && !hasDisplayedChoices) {
@@ -215,16 +214,17 @@ const Messages = ({ content }) => {
     borderColor, 
   };
 
+  
+  const backgroundStyle = {
+    backgroundImage: `url(/img/${backgroundImage})`,
+  };
   useEffect(() => {
     if (message) {
+      console.log(message.background_image);
       setBackgroundImage(message.background_image );
     }
   }, [message]); 
-
-  const backgroundStyle = {
-    backgroundImage: `url(/img/scene_1/${backgroundImage})`,
-  };
-
+  
   // const backgroundStyle = {
   //   backgroundImage: `url(${backgroundImg})`,
   // };

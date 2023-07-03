@@ -25,7 +25,7 @@ const Message = ({ content }) => {
   return (
     <div>
       <p>
-        <SlowText speed={20} text={content} /> 
+        <SlowText speed={60} text={content} /> 
       </p>
     </div>
   );
