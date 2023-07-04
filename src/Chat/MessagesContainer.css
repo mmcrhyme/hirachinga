@@ -112,3 +112,7 @@
 .textGlow {
   animation: textGlow 2s;
 }
+
+.hide {
+  display: none;
+}
