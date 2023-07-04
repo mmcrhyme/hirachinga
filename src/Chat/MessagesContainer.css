@@ -26,13 +26,11 @@
 
 .ChoicesBox {
   position: absolute;
-  top: 50%;
+  top: 15%;
   right: 20px;
   width: 200px;
-  background-color: rgba(0, 0, 0, 0.4);
   color: white;
   border-radius: 10px;
-  /* border: 1px solid white; */
 }
 
 .ChoiceButton {
@@ -42,22 +40,25 @@
   color: white;
   background: transparent;
   border: none;
-  /* border-bottom: 1px solid white; */
+  border: 5px solid purple;
   text-align: left;
   cursor: pointer;
-  margin-top: 7px; 
-  transition: background 0.3s; 
-  border-radius: 10px;
+  transition: background 0.5s; 
+  border-radius: 15px;
   font-size: 1.5rem; 
+  margin-bottom: 10px;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 
-/* .ChoiceButton:last-child {
-  border-bottom: none;
-} */
+
 
 .ChoiceButton:hover {
   background: rgba(255, 255, 255, 0.5);
+  transform: scale(1.1);
+  transition: all 0.2s ease-in-out;
+  background-color: purple;
+  color: hsl(0, 0%, 5%);
 }
 .status-container {
   width: 35%;

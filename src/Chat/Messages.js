@@ -188,11 +188,18 @@ const Messages = ({ content }) => {
 
   useEffect(() => {
     if (currentMessageIndex < content.text_sets[currentTextSetIndex].texts.length) {
+      let delay;
+      // Check the conditions to set the appropriate delay
+      if(content.id === 1 && content.text_sets.id === 1 && content.text_sets[0].texts[2]) {
+        delay = 25000;
+      } else {
+        delay = 4000;
+      }
       const timer = setTimeout(() => {
         setMessage(content.text_sets[currentTextSetIndex].texts[currentMessageIndex]);
         setCurrentMessageIndex(currentMessageIndex => currentMessageIndex + 1);
         setCurrentTextSetId(content.text_sets[currentTextSetIndex].id); 
-      }, 5000); 
+      }, delay); 
 
       return () => clearTimeout(timer);
     } else if (!isDisplayingChoices ) {
