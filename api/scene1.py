@@ -537,12 +537,12 @@ def main():
 
     new_text40 = Text(
     text="お金が100万増えた。/  女の子の満足度が10上がった。/ メンタルが10下がった。",
-    background_image="40.png",
+    background_image="src/img/40.png",
     gender="male",
     progress= 0,
-    mental= 0,
-    money= 0,
-    satisfaction= 0,
+    mental= -10,
+    money= 100,
+    satisfaction= 10,
     text_set_id=7
     )
 
@@ -1248,6 +1248,16 @@ def main():
     session.add(new_text68)
     session.add(new_text69)
     session.add(new_text70)
+    session.add(new_text71)
+    session.add(new_text72)
+    session.add(new_text73)
+    session.add(new_text74)
+    session.add(new_text75)
+    session.add(new_text76)
+    session.add(new_text77)
+    session.add(new_text78)
+    session.add(new_text79)
+    session.add(new_text80)
     session.add(new_text81)
     session.add(new_text82)
     session.add(new_text83)
