@@ -16,33 +16,42 @@ def main():
     # session.flush()
 
     # create 3 TextSets
-    new_text_set97 = TextSet(scene_id=1)
-    new_text_set98 = TextSet(scene_id=1)
-    new_text_set99 = TextSet(scene_id=1)
-    new_text_set100 = TextSet(scene_id=1)
-    new_text_set101 = TextSet(scene_id=1)
-    new_text_set102 = TextSet(scene_id=1)
-    new_text_set103 = TextSet(scene_id=1)
-    new_text_set104 = TextSet(scene_id=1)
-    new_text_set105 = TextSet(scene_id=1)
-    new_text_set106 = TextSet(scene_id=1)
-    new_text_set107 = TextSet(scene_id=1)
-    new_text_set108 = TextSet(scene_id=1)
-    new_text_set109 = TextSet(scene_id=1)
-    new_text_set110 = TextSet(scene_id=1)
+    new_text_set18 = TextSet(scene_id=1)
+    new_text_set19 = TextSet(scene_id=1)
+    new_text_set20 = TextSet(scene_id=1)
+    new_text_set21 = TextSet(scene_id=1)
+    new_text_set22 = TextSet(scene_id=1)
+    new_text_set23 = TextSet(scene_id=1)
+    new_text_set24 = TextSet(scene_id=1)
+    new_text_set25 = TextSet(scene_id=1)
+    new_text_set26 = TextSet(scene_id=1)
+    new_text_set27 = TextSet(scene_id=1)
+    new_text_set28 = TextSet(scene_id=1)
+    new_text_set29 = TextSet(scene_id=1)
+    new_text_set30 = TextSet(scene_id=1)
+    new_text_set31 = TextSet(scene_id=1)
+    new_text_set32 = TextSet(scene_id=1)
+    new_text_set33 = TextSet(scene_id=1)
+    new_text_set34 = TextSet(scene_id=1)
 
-    session.add(new_text_set1)
-    session.add(new_text_set2)
-    session.add(new_text_set3)
-    session.add(new_text_set4)
-    session.add(new_text_set5)
-    session.add(new_text_set6)
-    session.add(new_text_set7)
-    session.add(new_text_set8)
-    session.add(new_text_set9)
-    session.add(new_text_set10)
-    session.add(new_text_set11)
-    session.add(new_text_set12)
+    session.add(new_text_set18)
+    session.add(new_text_set19)
+    session.add(new_text_set20)
+    session.add(new_text_set21)
+    session.add(new_text_set22)
+    session.add(new_text_set23)
+    session.add(new_text_set24)
+    session.add(new_text_set25)
+    session.add(new_text_set26)
+    session.add(new_text_set27)
+    session.add(new_text_set28)
+    session.add(new_text_set29)
+    session.add(new_text_set30)
+    session.add(new_text_set31)
+    session.add(new_text_set32)
+    session.add(new_text_set33)
+    session.add(new_text_set34)
+
     session.flush()
 
     # text_sets = []
@@ -61,15 +70,15 @@ def main():
 
     # create 14 Texts
 
-    new_text1 = Text(
-    text="ひらちん「俺の名前はひらちん。G's ACADEMY LAB15期に入学した。実はホストの仕事を続けながらジーズに通っているのだが、毎回の課題提出がとっても大変だ。今日もこうして火曜の課題発表が終わったと思ったら、木曜朝提出の課題が出される。果たして今週の俺は木曜朝までに課題を提出できるのだろうか...。」",
-    background_image="1.png",
+    new_text97 = Text(
+    text="(質問をする!)ひらちん「山崎先生!課題で分からない点があるので質問させてください!」",
+    background_image="97.png",
     gender="male",
     progress= 0,
-    mental= 50,
-    money= 300,
-    satisfaction= 50,
-    text_set_id=1
+    mental= 0,
+    money= 0,
+    satisfaction= 0,
+    text_set_id=18
     )
     # session.add(new_text1)
 
@@ -77,624 +86,305 @@ def main():
     # new_text1 = Text(text="Example text 1", background_image="Example background 1", gender="Example gender", progress="Example progress", mental="Example mental", money="Example money", satisfaction="Example satisfaction", text_set_id=new_text_set1.id)
     # new_text2 = Text(text="Example text 2", background_image="Example background 2", gender="Example gender", progress="Example progress", mental="Example mental", money="Example money", satisfaction="Example satisfaction", text_set_id=new_text_set1.id)
     # ... continue for all 14 texts
-    new_text2 = Text(
-    text="ひらちん:「お、今日夕方から同伴予定の女の子Aから連絡だ。」",
-    background_image="2.png",
+    new_text98 = Text(
+    text="山崎先生「お!ひらちい頑張ってるね!もちろんだよ!何でも質問してくれ!」",
+    background_image="98.png",
     gender="male",
     progress= 0,
     mental= 0,
     money= 0,
     satisfaction= 0,
-    text_set_id=1
+    text_set_id=18
     )
 
-    new_text3 = Text(
-    text="女性A:「今日Takuyaに会えるの楽しみー!どれくらいお金持っていけばいいかな?」",
-    background_image="3.png",
-    gender="female",
-    progress= 0,
-    mental= 0,
+    new_text99 = Text(
+    text="課題進捗が50%上がった。/ メンタルが20上がった。",
+    background_image="99.png",
+    gender="male",
+    progress= 50,
+    mental= 20,
     money= 0,
     satisfaction= 0,
-    text_set_id=1
+    text_set_id=18
     )
 
-    new_text4 = Text(
-    text="女性A:「今日Takuyaに会えるの楽しみー!どれくらいお金持っていけばいいかな?」",
-    background_image="4.png",
-    gender="female",
-    progress= 0,
-    mental= 0,
-    money= 0,
-    satisfaction= 0,
-    text_set_id=1
-    )
-
-    new_text5 = Text(
-    text="Takuya:「持ってこれるだけ持ってこい」",
-    background_image="5.png",
+    new_text100 = Text(
+    text="Takuya:「今日は20時から1時の営業で、確か指名は女性Bだけ。課題あるから何事もなくアフターなしで帰りたいなぁ。」",
+    background_image="100.png",
     gender="male",
     progress= 0,
     mental= 0,
     money= 0,
     satisfaction= 0,
-    text_set_id=2
+    text_set_id=18
     )
 
-    new_text6 = Text(
-    text="女性A:「わかった!今月はTakuyaに貢ぐって決めてたからいっぱい持っていく!」",
-    background_image="6.png",
-    gender="female",
-    progress= 0,
-    mental= 0,
-    money= 0,
-    satisfaction= 0,
-    text_set_id=2
-    )
-
-    new_text7 = Text(
-    text="女の子の満足度が10上がった。/ メンタルが10上がった。",
-    background_image="7.png",
-    gender="male",
-    progress= 0,
-    mental= 10,
-    money= 0,
-    satisfaction= 10,
-    text_set_id=2
-    )
-
-    new_text8 = Text(
-    text="女性A:「今日はTakuyaとディナーからお店までたくさん一緒に居れるの嬉しいなぁ」",
-    background_image="8.png",
-    gender="female",
-    progress= 0,
-    mental= 0,
-    money= 0,
-    satisfaction= 0,
-    text_set_id=2
-    )
-
-    new_text9 = Text(
-    text="Takuya:「お、おう。そうだね」(課題やらなきゃやべぇなぁ...。)",
-    background_image="9.png",
+    new_text101 = Text(
+    text="Takuya:「あ、いらっしゃい。今日は指名してくれてありがとう。」",
+    background_image="101.png",
     gender="male",
     progress= 0,
     mental= 0,
     money= 0,
     satisfaction= 0,
-    text_set_id=2
+    text_set_id=18
     )
 
-    new_text10 = Text(
-    text="女性A:「そういえば、今日はアフター何時まで一緒に居れるの?」",
-    background_image="10.png",
+    new_text102 = Text(
+    text="女性B:「今日は最初から最後まで指名してるから、ゆっくり話せるの嬉しい♪」",
+    background_image="102.png",
     gender="female",
     progress= 0,
     mental= 0,
     money= 0,
     satisfaction= 0,
-    text_set_id=2
+    text_set_id=18
     )
 
-    new_text11 = Text(
-    text="女性A:「そういえば、今日はアフター何時まで一緒に居れるの?」",
-    background_image="11.png",
-    gender="female",
-    progress= 0,
-    mental= 0,
-    money= 0,
-    satisfaction= 0,
-    text_set_id=2
-    )
-
-    new_text12 = Text(
-    text="Takuya:「持ってこれるだけ持ってこい」",
-    background_image="12.png",
+    new_text103 = Text(
+    text="Takuya:「そうだね。じゃああっちの..席...で.......(驚汗)」",
+    background_image="103.png",
     gender="male",
     progress= 0,
     mental= 0,
     money= 0,
     satisfaction= 0,
-    text_set_id=3
+    text_set_id=18
     )
 
-    new_text13 = Text(
-    text="女性A:「わかったよぉ。」(今月お金厳しいし、ちょっと言い方きつかったなぁ。。)",
-    background_image="13.png",
+    new_text104 = Text(
+    text="女性C:「ちょっとTakuya〜!1年前からこの日って約束して指名してたのに誰よこいつ。Takuyaは私のものよ〜!!!」",
+    background_image="104.png",
     gender="female",
     progress= 0,
     mental= 0,
     money= 0,
     satisfaction= 0,
-    text_set_id=3
+    text_set_id=18
     )
 
-    new_text14 = Text(
-    text="女の子の満足度が10下がった。/ メンタルが10上がった。",
-    background_image="14.png",
-    gender="male",
-    progress= 0,
-    mental= 10,
-    money= 0,
-    satisfaction= -10,
-    text_set_id=3
-    )
-
-    new_text15 = Text(
-    text="女性A:「今日はTakuyaとディナーからお店までたくさん一緒に居れるの嬉しいなぁ」",
-    background_image="15.png",
-    gender="female",
-    progress= 0,
-    mental= 0,
-    money= 0,
-    satisfaction= 0,
-    text_set_id=3
-    )
-
-    new_text16 = Text(
-    text="Takuya:「お、おう。そうだね」(課題やらなきゃやべぇなぁ...。)",
-    background_image="16.png",
+    new_text105 = Text(
+    text="女の子2人が目の前で殴り合いのケンカをはじめてしまった。女性Bは割りと優しいから話せばわかってくれるけど、女性Cは怒らせたら特に手を付けられないタイプ。女性Cは超太客というのもあり上手くこの場を落ち着かせたい。どうやって鎮火させよう?",
+    background_image="105.png",
     gender="male",
     progress= 0,
     mental= 0,
     money= 0,
     satisfaction= 0,
-    text_set_id=3
+    text_set_id=18
     )
 
-    new_text17 = Text(
-    text="女性A:「そういえば、今日はアフター何時まで一緒に居れるの?」",
-    background_image="17.png",
-    gender="female",
-    progress= 0,
-    mental= 0,
-    money= 0,
-    satisfaction= 0,
-    text_set_id=3
-    )
-
-    new_text18 = Text(
-    text="女性A:「そういえば、今日はアフター何時まで一緒に居れるの?」",
-    background_image="18.png",
-    gender="female",
-    progress= 0,
-    mental= 0,
-    money= 0,
-    satisfaction= 0,
-    text_set_id=3
-    )
-
-    new_text19 = Text(
-    text="Takuya:「無理しない範囲で大丈夫だよ」",
-    background_image="19.png",
+    new_text106 = Text(
+    text="女の子2人が目の前で殴り合いのケンカをはじめてしまった。女性Bは割りと優しいから話せばわかってくれるけど、女性Cは怒らせたら特に手を付けられないタイプ。女性Cは超太客というのもあり上手くこの場を落ち着かせたい。どうやって鎮火させよう?",
+    background_image="106.png",
     gender="male",
     progress= 0,
     mental= 0,
     money= 0,
     satisfaction= 0,
-    text_set_id=4
-    )
-
-    new_text20 = Text(
-    text="女性A:「優しいね。ありがとう。」(本当は貢いでほしいと思ってるのに、優しいなぁ)",
-    background_image="20.png",
-    gender="female",
-    progress= 0,
-    mental= 0,
-    money= 0,
-    satisfaction= 0,
-    text_set_id=4
-    )
-
-    new_text21 = Text(
-    text="お金が50万減った。/ 女の子の満足度が10上がった。/ メンタルが5下がった。",
-    background_image="21.png",
-    gender="male",
-    progress= 0,
-    mental= -5,
-    money= -50,
-    satisfaction= 10,
-    text_set_id=4
-    )
-
-    new_text22 = Text(
-    text="女性A:「今日はTakuyaとディナーからお店までたくさん一緒に居れるの嬉しいなぁ」",
-    background_image="22.png",
-    gender="female",
-    progress= 0,
-    mental= 0,
-    money= 0,
-    satisfaction= 0,
-    text_set_id=4
-    )
-
-    new_text23 = Text(
-    text="Takuya:「お、おう。そうだね」(課題やらなきゃやべぇなぁ...。)",
-    background_image="23.png",
-    gender="male",
-    progress= 0,
-    mental= 0,
-    money= 0,
-    satisfaction= 0,
-    text_set_id=4
-    )
-
-    new_text24 = Text(
-    text="女性A:「そういえば、今日はアフター何時まで一緒に居れるの?」",
-    background_image="24.png",
-    gender="female",
-    progress= 0,
-    mental= 0,
-    money= 0,
-    satisfaction= 0,
-    text_set_id=4
-    )
-
-    new_text25 = Text(
-    text="女性A:「そういえば、今日はアフター何時まで一緒に居れるの?」",
-    background_image="25.png",
-    gender="female",
-    progress= 0,
-    mental= 0,
-    money= 0,
-    satisfaction= 0,
-    text_set_id=4
-    )
-
-    new_text26 = Text(
-    text="Takuya:「アフター1時間だけなら一緒に居れるよ」",
-    background_image="26.png",
-    gender="male",
-    progress= 0,
-    mental= 0,
-    money= 0,
-    satisfaction= 0,
-    text_set_id=5
-    )
-
-    new_text27 = Text(
-    text="女性A:「そうだよね。忙しいもんね。でも少しでも時間開けてくれてありがとう。」",
-    background_image="27.png",
-    gender="female",
-    progress= 0,
-    mental= 0,
-    money= 0,
-    satisfaction= 0,
-    text_set_id=5
-    )
-
-    new_text28 = Text(
-    text="お金が30万増えた。/ 女の子の満足度が5上がった。/ メンタルが5上がった。",
-    background_image="28.png",
-    gender="male",
-    progress= 0,
-    mental= 5,
-    money= 30,
-    satisfaction= 5,
-    text_set_id=5
-    )
-
-    new_text29 = Text(
-    text="Takuya:「改めて、今日は指名してくれてありがとう。2人の出会いに乾杯しよう。」",
-    background_image="29.png",
-    gender="male",
-    progress= 0,
-    mental= 0,
-    money= 0,
-    satisfaction= 0,
-    text_set_id=5
-    )
-
-    new_text30 = Text(
-    text="女性A:「ドリンク、、何にしようかな?」",
-    background_image="30.png",
-    gender="female",
-    progress= 0,
-    mental= 0,
-    money= 0,
-    satisfaction= 0,
-    text_set_id=5
-    )
-
-    new_text31 = Text(
-    text="女性A:「ドリンク、、何にしようかな?」",
-    background_image="31.png",
-    gender="female",
-    progress= 0,
-    mental= 0,
-    money= 0,
-    satisfaction= 0,
-    text_set_id=5
-    )
-
-    new_text32 = Text(
-    text="Takuya:「アフター1時間だけなら一緒に居れるよ」",
-    background_image="32.png",
-    gender="male",
-    progress= 0,
-    mental= 0,
-    money= 0,
-    satisfaction= 0,
-    text_set_id=6
-    )
-
-    new_text33 = Text(
-    text="女性A:「は?今日私の誕生日ってこと覚えてないの?(怒)ありえない!」",
-    background_image="33.png",
-    gender="female",
-    progress= 0,
-    mental= 0,
-    money= 0,
-    satisfaction= 0,
-    text_set_id=6
-    )
-
-    new_text34 = Text(
-    text="急いで誕生日プレゼントを買いにいき、お金が200万減った。/ 女の子の満足度が30下がった。/ メンタルが20下がった。",
-    background_image="34.png",
-    gender="male",
-    progress= 0,
-    mental= -20,
-    money= -200,
-    satisfaction= -30,
-    text_set_id=6
-    )
-
-    new_text35 = Text(
-    text="Takuya:「改めて、今日は指名してくれてありがとう。2人の出会いに乾杯しよう。」",
-    background_image="35.png",
-    gender="male",
-    progress= 0,
-    mental= 0,
-    money= 0,
-    satisfaction= 0,
-    text_set_id=6
-    )
-
-    new_text36 = Text(
-    text="女性A:「ドリンク、、何にしようかな?」",
-    background_image="36.png",
-    gender="female",
-    progress= 0,
-    mental= 0,
-    money= 0,
-    satisfaction= 0,
-    text_set_id=6
-    )
-
-    new_text37 = Text(
-    text="女性A:「ドリンク、、何にしようかな?」",
-    background_image="37.png",
-    gender="female",
-    progress= 0,
-    mental= 0,
-    money= 0,
-    satisfaction= 0,
-    text_set_id=6
-    )
-
-    new_text38 = Text(
-    text="Takuya:「最後までいっちゃおう〜！」",
-    background_image="38.png",
-    gender="male",
-    progress= 0,
-    mental= 0,
-    money= 0,
-    satisfaction= 0,
-    text_set_id=7
-    )
-
-    new_text39 = Text(
-    text="女性A:「え!いいの!?やった〜!今日は幸せな日になりそう〜!」",
-    background_image="39.png",
-    gender="female",
-    progress= 0,
-    mental= 0,
-    money= 0,
-    satisfaction= 0,
-    text_set_id=7
-    )
-
-    new_text40 = Text(
-    text="お金が100万増えた。/  女の子の満足度が10上がった。/ メンタルが10下がった。",
-    background_image="40.png",
-    gender="male",
-    progress= 0,
-    mental= 0,
-    money= 0,
-    satisfaction= 0,
-    text_set_id=7
-    )
-
-    new_text41 = Text(
-    text="Takuya:「改めて、今日は指名してくれてありがとう。2人の出会いに乾杯しよう。」",
-    background_image="41.png",
-    gender="male",
-    progress= 0,
-    mental= 0,
-    money= 0,
-    satisfaction= 0,
-    text_set_id=7
-    )
-    new_text42 = Text(
-    text="女性A:「ドリンク、、何にしようかな?」",
-    background_image="42.png",
-    gender="female",
-    progress= 0,
-    mental= 0,
-    money= 0,
-    satisfaction= 0,
-    text_set_id=7
-    )
-    new_text43 = Text(
-    text="女性A:「ドリンク、、何にしようかな?」",
-    background_image="43.png",
-    gender="female",
-    progress= 0,
-    mental= 0,
-    money= 0,
-    satisfaction= 0,
-    text_set_id=7
+    text_set_id=18
     )
 
 
-
-
-    session.add(new_text1)
-    session.add(new_text2)
-    session.add(new_text3)
-    session.add(new_text4)
-    session.add(new_text5)
-    session.add(new_text6)
-    session.add(new_text7)
-    session.add(new_text8)
-    session.add(new_text9)
-    session.add(new_text10)
-    session.add(new_text11)
-    session.add(new_text12)
-    session.add(new_text13)
-    session.add(new_text14)
-    session.add(new_text15)
-    session.add(new_text16)
-    session.add(new_text17)
-    session.add(new_text18)
-    session.add(new_text19)
-    session.add(new_text20)
-    session.add(new_text21)
-    session.add(new_text22)
-    session.add(new_text23)
-    session.add(new_text24)
-    session.add(new_text25)
-    session.add(new_text26)
-    session.add(new_text27)
-    session.add(new_text28)
-    session.add(new_text29)
-    session.add(new_text30)
-    session.add(new_text31)
-    session.add(new_text32)
-    session.add(new_text33)
-    session.add(new_text34)
-    session.add(new_text35)
-    session.add(new_text36)
-    session.add(new_text37)
-    session.add(new_text38)
-    session.add(new_text39)
-    session.add(new_text40)
-    session.add(new_text41)
-    session.add(new_text42)
-    session.add(new_text43)
+    session.add(new_text97)
+    session.add(new_text98)
+    session.add(new_text99)
+    session.add(new_text100)
+    session.add(new_text101)
+    session.add(new_text102)
+    session.add(new_text103)
+    session.add(new_text104)
+    session.add(new_text105)
+    session.add(new_text106)
+    
 
     # create 2 Choices
-    # new_choice1 = Choice(choice_text="持ってこれるだけ持ってこい", scene_id=new_scene.id)
-    # new_choice2 = Choice(choice_text="無理しない範囲で大丈夫だよ", scene_id=new_scene.id)
-    new_choice1 = Choice(choice_text="持ってこれるだけ持ってこい", scene_id=1, belong_text_set_id=1)
-    new_choice2 = Choice(choice_text="無理しない範囲で大丈夫だよ", scene_id=1, belong_text_set_id=1)
-    # new_choice3 = Choice(choice_text="アフター1時間だけなら一緒に居れるよ", scene_id=1)
-    # new_choice4 = Choice(choice_text="最後までいっちゃおう〜!", scene_id=1)
-    new_choice3 = Choice(choice_text="アフター1時間だけなら一緒に居れるよ", scene_id=1, belong_text_set_id=2)
-    new_choice4 = Choice(choice_text="最後までいっちゃおう〜!", scene_id=1, belong_text_set_id=2)
-    new_choice5 = Choice(choice_text="アフター1時間だけなら一緒に居れるよ", scene_id=1, belong_text_set_id=3)
-    new_choice6 = Choice(choice_text="最後までいっちゃおう〜!", scene_id=1, belong_text_set_id=3)
-    new_choice7 = Choice(choice_text="アフター1時間だけなら一緒に居れるよ", scene_id=1, belong_text_set_id=4)
-    new_choice8 = Choice(choice_text="最後までいっちゃおう〜!", scene_id=1, belong_text_set_id=4)
-    # new_choice5 = Choice(choice_text="シャンパンタワーいれてほしいな", scene_id=1)
-    # new_choice6 = Choice(choice_text="好きなの飲みなよ", scene_id=1)
-    # new_choice7 = Choice(choice_text="今日課題があるから実はあんまり飲めないんだ", scene_id=1)
-    new_choice9 = Choice(choice_text="シャンパンタワーいれてほしいな", scene_id=1, belong_text_set_id=5)
-    new_choice10 = Choice(choice_text="好きなの飲みなよ", scene_id=1, belong_text_set_id=5)
-    new_choice11 = Choice(choice_text="今日課題があるから実はあんまり飲めないんだ", scene_id=1, belong_text_set_id=5)
-    new_choice12 = Choice(choice_text="シャンパンタワーいれてほしいな", scene_id=1, belong_text_set_id=6)
-    new_choice13 = Choice(choice_text="好きなの飲みなよ", scene_id=1, belong_text_set_id=6)
-    new_choice14 = Choice(choice_text="今日課題があるから実はあんまり飲めないんだ", scene_id=1, belong_text_set_id=6)
-    new_choice15 = Choice(choice_text="シャンパンタワーいれてほしいな", scene_id=1, belong_text_set_id=7)
-    new_choice16 = Choice(choice_text="好きなの飲みなよ", scene_id=1, belong_text_set_id=7)
-    new_choice17 = Choice(choice_text="今日課題があるから実はあんまり飲めないんだ", scene_id=1, belong_text_set_id=7)
+    new_choice50 = Choice(choice_text="ケンカをとめるために間に入る", scene_id=1, belong_text_set_id=18)
+    new_choice51 = Choice(choice_text="しばらくそっとしておく", scene_id=1, belong_text_set_id=18)
+    new_choice52 = Choice(choice_text="ケンカをとめるために間に入る", scene_id=1, belong_text_set_id=19)
+    new_choice53 = Choice(choice_text="しばらくそっとしておく", scene_id=1, belong_text_set_id=19)
+    new_choice54 = Choice(choice_text="ケンカをとめるために間に入る", scene_id=1, belong_text_set_id=20)
+    new_choice55 = Choice(choice_text="しばらくそっとしておく", scene_id=1, belong_text_set_id=20)
+    new_choice56 = Choice(choice_text="ケンカをとめるために間に入る", scene_id=1, belong_text_set_id=21)
+    new_choice57 = Choice(choice_text="しばらくそっとしておく", scene_id=1, belong_text_set_id=21)
+    new_choice58 = Choice(choice_text="ケンカをとめるために間に入る", scene_id=1, belong_text_set_id=22)
+    new_choice59 = Choice(choice_text="しばらくそっとしておく", scene_id=1, belong_text_set_id=22)
+    new_choice60 = Choice(choice_text="ケンカをとめるために間に入る", scene_id=1, belong_text_set_id=23)
+    new_choice61 = Choice(choice_text="しばらくそっとしておく", scene_id=1, belong_text_set_id=23)
+    new_choice62 = Choice(choice_text="ケンカをとめるために間に入る", scene_id=1, belong_text_set_id=24)
+    new_choice63 = Choice(choice_text="しばらくそっとしておく", scene_id=1, belong_text_set_id=24)
+    new_choice64 = Choice(choice_text="ケンカをとめるために間に入る", scene_id=1, belong_text_set_id=25)
+    new_choice65 = Choice(choice_text="しばらくそっとしておく", scene_id=1, belong_text_set_id=25)
+    new_choice66 = Choice(choice_text="ケンカをとめるために間に入る", scene_id=1, belong_text_set_id=26)
+    new_choice67 = Choice(choice_text="しばらくそっとしておく", scene_id=1, belong_text_set_id=26)
+    new_choice68 = Choice(choice_text="ケンカをとめるために間に入る", scene_id=1, belong_text_set_id=27)
+    new_choice69 = Choice(choice_text="しばらくそっとしておく", scene_id=1, belong_text_set_id=27)
+    new_choice70 = Choice(choice_text="ケンカをとめるために間に入る", scene_id=1, belong_text_set_id=28)
+    new_choice71 = Choice(choice_text="しばらくそっとしておく", scene_id=1, belong_text_set_id=28)
+    new_choice72 = Choice(choice_text="ケンカをとめるために間に入る", scene_id=1, belong_text_set_id=29)
+    new_choice73 = Choice(choice_text="しばらくそっとしておく", scene_id=1, belong_text_set_id=29)
+    new_choice74 = Choice(choice_text="ケンカをとめるために間に入る", scene_id=1, belong_text_set_id=30)
+    new_choice75 = Choice(choice_text="しばらくそっとしておく", scene_id=1, belong_text_set_id=30)
+    new_choice76 = Choice(choice_text="ケンカをとめるために間に入る", scene_id=1, belong_text_set_id=31)
+    new_choice77 = Choice(choice_text="しばらくそっとしておく", scene_id=1, belong_text_set_id=31)
+    new_choice78 = Choice(choice_text="ケンカをとめるために間に入る", scene_id=1, belong_text_set_id=32)
+    new_choice79 = Choice(choice_text="しばらくそっとしておく", scene_id=1, belong_text_set_id=32)
 
-    session.add(new_choice1)
-    session.add(new_choice2)
-    session.add(new_choice3)
-    session.add(new_choice4)
-    session.add(new_choice5)
-    session.add(new_choice6)
-    session.add(new_choice7)
-    session.add(new_choice8)
-    session.add(new_choice9)
-    session.add(new_choice10)
-    session.add(new_choice11)
-    session.add(new_choice12)
-    session.add(new_choice13)
-    session.add(new_choice14)
-    session.add(new_choice15)
-    session.add(new_choice16)
-    session.add(new_choice17)
+    session.add(new_choice50)
+    session.add(new_choice51)
+    session.add(new_choice52)
+    session.add(new_choice53)
+    session.add(new_choice54)
+    session.add(new_choice55)
+    session.add(new_choice56)
+    session.add(new_choice57)
+    session.add(new_choice58)
+    session.add(new_choice59)
+    session.add(new_choice60)
+    session.add(new_choice61)
+    session.add(new_choice62)
+    session.add(new_choice63)
+    session.add(new_choice64)
+    session.add(new_choice65)
+    session.add(new_choice66)
+    session.add(new_choice67)
+    session.add(new_choice68)
+    session.add(new_choice69)
+    session.add(new_choice70)
+    session.add(new_choice71)
+    session.add(new_choice72)
+    session.add(new_choice73)
+    session.add(new_choice74)
+    session.add(new_choice75)
+    session.add(new_choice76)
+    session.add(new_choice77)
+    session.add(new_choice78)
+    session.add(new_choice79)
     session.flush()
 
     # create 3 ChoiceTextSets
-    new_choice_text_set1 = ChoiceTextSet(choice_id=new_choice1.id, text_set_id=new_text_set2.id)
-    new_choice_text_set2 = ChoiceTextSet(choice_id=new_choice1.id, text_set_id=new_text_set3.id)
-    new_choice_text_set3 = ChoiceTextSet(choice_id=new_choice2.id, text_set_id=new_text_set4.id)
-    # new_choice_text_set4 = ChoiceTextSet(choice_id=new_choice3.id, text_set_id=new_text_set5.id)
-    # new_choice_text_set5 = ChoiceTextSet(choice_id=new_choice3.id, text_set_id=new_text_set6.id)
-    # new_choice_text_set6 = ChoiceTextSet(choice_id=new_choice4.id, text_set_id=new_text_set7.id)
-    # new_choice_text_set7 = ChoiceTextSet(choice_id=new_choice5.id, text_set_id=new_text_set8.id)
-    # new_choice_text_set8 = ChoiceTextSet(choice_id=new_choice5.id, text_set_id=new_text_set9.id)
-    # new_choice_text_set9 = ChoiceTextSet(choice_id=new_choice6.id, text_set_id=new_text_set10.id)
-    # new_choice_text_set10 = ChoiceTextSet(choice_id=new_choice7.id, text_set_id=new_text_set11.id)
-    # new_choice_text_set11 = ChoiceTextSet(choice_id=new_choice7.id, text_set_id=new_text_set12.id)
-    new_choice_text_set4 = ChoiceTextSet(choice_id=new_choice3.id, text_set_id=new_text_set5.id)
-    new_choice_text_set5 = ChoiceTextSet(choice_id=new_choice3.id, text_set_id=new_text_set6.id)
-    new_choice_text_set6 = ChoiceTextSet(choice_id=new_choice4.id, text_set_id=new_text_set7.id)
-    new_choice_text_set7 = ChoiceTextSet(choice_id=new_choice5.id, text_set_id=new_text_set5.id)
-    new_choice_text_set8 = ChoiceTextSet(choice_id=new_choice5.id, text_set_id=new_text_set6.id)
-    new_choice_text_set9 = ChoiceTextSet(choice_id=new_choice6.id, text_set_id=new_text_set7.id)
-    new_choice_text_set10 = ChoiceTextSet(choice_id=new_choice7.id, text_set_id=new_text_set5.id)
-    new_choice_text_set11 = ChoiceTextSet(choice_id=new_choice7.id, text_set_id=new_text_set6.id)
-    new_choice_text_set12 = ChoiceTextSet(choice_id=new_choice8.id, text_set_id=new_text_set7.id)
+    new_choice_text_set68 = ChoiceTextSet(choice_id=new_choice50.id, text_set_id=new_text_set33.id)
+    new_choice_text_set69 = ChoiceTextSet(choice_id=new_choice50.id, text_set_id=new_text_set34.id)
+    new_choice_text_set70 = ChoiceTextSet(choice_id=new_choice51.id, text_set_id=new_text_set33.id)
+    new_choice_text_set71 = ChoiceTextSet(choice_id=new_choice51.id, text_set_id=new_text_set34.id)
+    new_choice_text_set72 = ChoiceTextSet(choice_id=new_choice52.id, text_set_id=new_text_set33.id)
+    new_choice_text_set73 = ChoiceTextSet(choice_id=new_choice52.id, text_set_id=new_text_set34.id)
+    new_choice_text_set74 = ChoiceTextSet(choice_id=new_choice53.id, text_set_id=new_text_set33.id)
+    new_choice_text_set75 = ChoiceTextSet(choice_id=new_choice53.id, text_set_id=new_text_set34.id)
+    new_choice_text_set76 = ChoiceTextSet(choice_id=new_choice54.id, text_set_id=new_text_set33.id)
+    new_choice_text_set77 = ChoiceTextSet(choice_id=new_choice54.id, text_set_id=new_text_set34.id)
+    new_choice_text_set78 = ChoiceTextSet(choice_id=new_choice55.id, text_set_id=new_text_set33.id)
+    new_choice_text_set79 = ChoiceTextSet(choice_id=new_choice55.id, text_set_id=new_text_set34.id)
+    new_choice_text_set80 = ChoiceTextSet(choice_id=new_choice56.id, text_set_id=new_text_set33.id)
+    new_choice_text_set81 = ChoiceTextSet(choice_id=new_choice56.id, text_set_id=new_text_set34.id)
+    new_choice_text_set82 = ChoiceTextSet(choice_id=new_choice57.id, text_set_id=new_text_set33.id)
+    new_choice_text_set83 = ChoiceTextSet(choice_id=new_choice57.id, text_set_id=new_text_set34.id)
+    new_choice_text_set84 = ChoiceTextSet(choice_id=new_choice58.id, text_set_id=new_text_set33.id)
+    new_choice_text_set85 = ChoiceTextSet(choice_id=new_choice58.id, text_set_id=new_text_set34.id)
+    new_choice_text_set86 = ChoiceTextSet(choice_id=new_choice59.id, text_set_id=new_text_set33.id)
+    new_choice_text_set87 = ChoiceTextSet(choice_id=new_choice59.id, text_set_id=new_text_set34.id)
+    new_choice_text_set88 = ChoiceTextSet(choice_id=new_choice60.id, text_set_id=new_text_set33.id)
+    new_choice_text_set89 = ChoiceTextSet(choice_id=new_choice60.id, text_set_id=new_text_set34.id)
+    new_choice_text_set90 = ChoiceTextSet(choice_id=new_choice61.id, text_set_id=new_text_set33.id)
+    new_choice_text_set91 = ChoiceTextSet(choice_id=new_choice61.id, text_set_id=new_text_set34.id)
+    new_choice_text_set92 = ChoiceTextSet(choice_id=new_choice62.id, text_set_id=new_text_set33.id)
+    new_choice_text_set93 = ChoiceTextSet(choice_id=new_choice62.id, text_set_id=new_text_set34.id)
+    new_choice_text_set94 = ChoiceTextSet(choice_id=new_choice63.id, text_set_id=new_text_set33.id)
+    new_choice_text_set95 = ChoiceTextSet(choice_id=new_choice63.id, text_set_id=new_text_set34.id)
+    new_choice_text_set96 = ChoiceTextSet(choice_id=new_choice64.id, text_set_id=new_text_set33.id)
+    new_choice_text_set97 = ChoiceTextSet(choice_id=new_choice64.id, text_set_id=new_text_set34.id)
+    new_choice_text_set98 = ChoiceTextSet(choice_id=new_choice65.id, text_set_id=new_text_set33.id)
+    new_choice_text_set99 = ChoiceTextSet(choice_id=new_choice65.id, text_set_id=new_text_set34.id)
+    new_choice_text_set100 = ChoiceTextSet(choice_id=new_choice66.id, text_set_id=new_text_set33.id)
+    new_choice_text_set101 = ChoiceTextSet(choice_id=new_choice66.id, text_set_id=new_text_set34.id)
+    new_choice_text_set102 = ChoiceTextSet(choice_id=new_choice67.id, text_set_id=new_text_set33.id)
+    new_choice_text_set103 = ChoiceTextSet(choice_id=new_choice67.id, text_set_id=new_text_set34.id)
+    new_choice_text_set104 = ChoiceTextSet(choice_id=new_choice68.id, text_set_id=new_text_set33.id)
+    new_choice_text_set105 = ChoiceTextSet(choice_id=new_choice68.id, text_set_id=new_text_set34.id)
+    new_choice_text_set106 = ChoiceTextSet(choice_id=new_choice69.id, text_set_id=new_text_set33.id)
+    new_choice_text_set107 = ChoiceTextSet(choice_id=new_choice69.id, text_set_id=new_text_set34.id)
+    new_choice_text_set108 = ChoiceTextSet(choice_id=new_choice70.id, text_set_id=new_text_set33.id)
+    new_choice_text_set109 = ChoiceTextSet(choice_id=new_choice70.id, text_set_id=new_text_set34.id)
+    new_choice_text_set110 = ChoiceTextSet(choice_id=new_choice71.id, text_set_id=new_text_set33.id)
+    new_choice_text_set111 = ChoiceTextSet(choice_id=new_choice71.id, text_set_id=new_text_set34.id)
+    new_choice_text_set112 = ChoiceTextSet(choice_id=new_choice72.id, text_set_id=new_text_set33.id)
+    new_choice_text_set113 = ChoiceTextSet(choice_id=new_choice72.id, text_set_id=new_text_set34.id)
+    new_choice_text_set114 = ChoiceTextSet(choice_id=new_choice73.id, text_set_id=new_text_set33.id)
+    new_choice_text_set115 = ChoiceTextSet(choice_id=new_choice73.id, text_set_id=new_text_set34.id)
+    new_choice_text_set116 = ChoiceTextSet(choice_id=new_choice74.id, text_set_id=new_text_set33.id)
+    new_choice_text_set117 = ChoiceTextSet(choice_id=new_choice74.id, text_set_id=new_text_set34.id)
+    new_choice_text_set118 = ChoiceTextSet(choice_id=new_choice75.id, text_set_id=new_text_set33.id)
+    new_choice_text_set119 = ChoiceTextSet(choice_id=new_choice75.id, text_set_id=new_text_set34.id)
+    new_choice_text_set120 = ChoiceTextSet(choice_id=new_choice76.id, text_set_id=new_text_set33.id)
+    new_choice_text_set121 = ChoiceTextSet(choice_id=new_choice76.id, text_set_id=new_text_set34.id)
+    new_choice_text_set122 = ChoiceTextSet(choice_id=new_choice77.id, text_set_id=new_text_set33.id)
+    new_choice_text_set123 = ChoiceTextSet(choice_id=new_choice77.id, text_set_id=new_text_set34.id)
+    new_choice_text_set124 = ChoiceTextSet(choice_id=new_choice78.id, text_set_id=new_text_set33.id)
+    new_choice_text_set125 = ChoiceTextSet(choice_id=new_choice78.id, text_set_id=new_text_set34.id)
+    new_choice_text_set126 = ChoiceTextSet(choice_id=new_choice79.id, text_set_id=new_text_set33.id)
+    new_choice_text_set127 = ChoiceTextSet(choice_id=new_choice79.id, text_set_id=new_text_set34.id)
 
-    new_choice_text_set13 = ChoiceTextSet(choice_id=new_choice9.id, text_set_id=new_text_set8.id)
-    new_choice_text_set14 = ChoiceTextSet(choice_id=new_choice9.id, text_set_id=new_text_set9.id)
-    new_choice_text_set15 = ChoiceTextSet(choice_id=new_choice10.id, text_set_id=new_text_set10.id)
-    new_choice_text_set16 = ChoiceTextSet(choice_id=new_choice11.id, text_set_id=new_text_set11.id)
-    new_choice_text_set17 = ChoiceTextSet(choice_id=new_choice11.id, text_set_id=new_text_set12.id)
-    new_choice_text_set18 = ChoiceTextSet(choice_id=new_choice12.id, text_set_id=new_text_set8.id)
-    new_choice_text_set19 = ChoiceTextSet(choice_id=new_choice12.id, text_set_id=new_text_set9.id)
-    new_choice_text_set20 = ChoiceTextSet(choice_id=new_choice13.id, text_set_id=new_text_set10.id)
-    new_choice_text_set21 = ChoiceTextSet(choice_id=new_choice14.id, text_set_id=new_text_set11.id)
-    new_choice_text_set22 = ChoiceTextSet(choice_id=new_choice14.id, text_set_id=new_text_set12.id)
-    new_choice_text_set23 = ChoiceTextSet(choice_id=new_choice15.id, text_set_id=new_text_set8.id)
-    new_choice_text_set24 = ChoiceTextSet(choice_id=new_choice15.id, text_set_id=new_text_set9.id)
-    new_choice_text_set25 = ChoiceTextSet(choice_id=new_choice16.id, text_set_id=new_text_set10.id)
-    new_choice_text_set26 = ChoiceTextSet(choice_id=new_choice17.id, text_set_id=new_text_set11.id)
-    new_choice_text_set27 = ChoiceTextSet(choice_id=new_choice17.id, text_set_id=new_text_set12.id)
 
-
-    session.add(new_choice_text_set1)
-    session.add(new_choice_text_set2)
-    session.add(new_choice_text_set3)
-    session.add(new_choice_text_set4)
-    session.add(new_choice_text_set5)
-    session.add(new_choice_text_set6)
-    session.add(new_choice_text_set7)
-    session.add(new_choice_text_set8)
-    session.add(new_choice_text_set9)
-    session.add(new_choice_text_set10)
-    session.add(new_choice_text_set11)
-    session.add(new_choice_text_set12)
-    session.add(new_choice_text_set13)
-    session.add(new_choice_text_set14)
-    session.add(new_choice_text_set15)
-    session.add(new_choice_text_set16)
-    session.add(new_choice_text_set17)
-    session.add(new_choice_text_set18)
-    session.add(new_choice_text_set19)
-    session.add(new_choice_text_set20)
-    session.add(new_choice_text_set21)
-    session.add(new_choice_text_set22)
-    session.add(new_choice_text_set23)
-    session.add(new_choice_text_set24)
-    session.add(new_choice_text_set25)
-    session.add(new_choice_text_set26)
-    session.add(new_choice_text_set27)
+    session.add(new_choice_text_set68)
+    session.add(new_choice_text_set69)
+    session.add(new_choice_text_set70)
+    session.add(new_choice_text_set71)
+    session.add(new_choice_text_set72)
+    session.add(new_choice_text_set73)
+    session.add(new_choice_text_set74)
+    session.add(new_choice_text_set75)
+    session.add(new_choice_text_set76)
+    session.add(new_choice_text_set77)
+    session.add(new_choice_text_set78)
+    session.add(new_choice_text_set79)
+    session.add(new_choice_text_set80)
+    session.add(new_choice_text_set81)
+    session.add(new_choice_text_set82)
+    session.add(new_choice_text_set83)
+    session.add(new_choice_text_set84)
+    session.add(new_choice_text_set85)
+    session.add(new_choice_text_set86)
+    session.add(new_choice_text_set87)
+    session.add(new_choice_text_set88)
+    session.add(new_choice_text_set89)
+    session.add(new_choice_text_set90)
+    session.add(new_choice_text_set91)
+    session.add(new_choice_text_set92)
+    session.add(new_choice_text_set93)
+    session.add(new_choice_text_set94)
+    session.add(new_choice_text_set95)
+    session.add(new_choice_text_set96)
+    session.add(new_choice_text_set97)
+    session.add(new_choice_text_set98)
+    session.add(new_choice_text_set99)
+    session.add(new_choice_text_set100)
+    session.add(new_choice_text_set101)
+    session.add(new_choice_text_set102)
+    session.add(new_choice_text_set103)
+    session.add(new_choice_text_set104)
+    session.add(new_choice_text_set105)
+    session.add(new_choice_text_set106)
+    session.add(new_choice_text_set107)
+    session.add(new_choice_text_set108)
+    session.add(new_choice_text_set109)
+    session.add(new_choice_text_set110)
+    session.add(new_choice_text_set111)
+    session.add(new_choice_text_set112)
+    session.add(new_choice_text_set113)
+    session.add(new_choice_text_set114)
+    session.add(new_choice_text_set115)
+    session.add(new_choice_text_set116)
+    session.add(new_choice_text_set117)
+    session.add(new_choice_text_set118)
+    session.add(new_choice_text_set119)
+    session.add(new_choice_text_set120)
+    session.add(new_choice_text_set121)
+    session.add(new_choice_text_set122)
+    session.add(new_choice_text_set123)
+    session.add(new_choice_text_set124)
+    session.add(new_choice_text_set125)
+    session.add(new_choice_text_set126)
+    session.add(new_choice_text_set127)
 
     # commit the session
     session.commit()
