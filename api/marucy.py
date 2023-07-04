@@ -1263,6 +1263,116 @@ def main():
     text_set_id=28
     )
 
+    new_text205 = Text(
+    text="(質問をする!)ひらちん「山崎先生!課題で分からない点があるので質問させてください!」",
+    background_image="205.png",
+    gender="male",
+    progress= 0,
+    mental= 0,
+    money= 0,
+    satisfaction= 0,
+    text_set_id=29
+    )
+
+    new_text206 = Text(
+    text="山崎先生「ごめんね、今から帰っておじゃる丸観るからまた今度ね。」",
+    background_image="206.png",
+    gender="male",
+    progress= 0,
+    mental= 0,
+    money= 0,
+    satisfaction= 0,
+    text_set_id=29
+    )
+
+    new_text207 = Text(
+    text="課題進捗が20%上がった。/ メンタルが10下がった。/ おじゃる丸に嫉妬するようになった。",
+    background_image="207.png",
+    gender="male",
+    progress= 20,
+    mental= -10,
+    money= 0,
+    satisfaction= 0,
+    text_set_id=29
+    )
+
+    new_text208 = Text(
+    text="Takuya:「今日は20時から1時の営業で、確か指名は女性Bだけ。課題あるから何事もなくアフターなしで帰りたいなぁ。」",
+    background_image="208.png",
+    gender="male",
+    progress= 0,
+    mental= 0,
+    money= 0,
+    satisfaction= 0,
+    text_set_id=29
+    )
+
+    new_text209 = Text(
+    text="Takuya:「あ、いらっしゃい。今日は指名してくれてありがとう。」",
+    background_image="209.png",
+    gender="male",
+    progress= 0,
+    mental= 0,
+    money= 0,
+    satisfaction= 0,
+    text_set_id=29
+    )
+
+    new_text210 = Text(
+    text="女性B:「今日は最初から最後まで指名してるから、ゆっくり話せるの嬉しい♪」",
+    background_image="210.png",
+    gender="female",
+    progress= 0,
+    mental= 0,
+    money= 0,
+    satisfaction= 0,
+    text_set_id=29
+    )
+
+    new_text211 = Text(
+    text="Takuya:「そうだね。じゃああっちの..席...で.......(驚汗)」",
+    background_image="211.png",
+    gender="male",
+    progress= 0,
+    mental= 0,
+    money= 0,
+    satisfaction= 0,
+    text_set_id=29
+    )
+
+    new_text212 = Text(
+    text="女性C:「ちょっとTakuya〜!1年前からこの日って約束して指名してたのに誰よこいつ。Takuyaは私のものよ〜!!!」",
+    background_image="212.png",
+    gender="female",
+    progress= 0,
+    mental= 0,
+    money= 0,
+    satisfaction= 0,
+    text_set_id=29
+    )
+
+    new_text213 = Text(
+    text="女の子2人が目の前で殴り合いのケンカをはじめてしまった。女性Bは割りと優しいから話せばわかってくれるけど、女性Cは怒らせたら特に手を付けられないタイプ。女性Cは超太客というのもあり上手くこの場を落ち着かせたい。どうやって鎮火させよう?",
+    background_image="213.png",
+    gender="male",
+    progress= 0,
+    mental= 0,
+    money= 0,
+    satisfaction= 0,
+    text_set_id=29
+    )
+
+    new_text214 = Text(
+    text="女の子2人が目の前で殴り合いのケンカをはじめてしまった。女性Bは割りと優しいから話せばわかってくれるけど、女性Cは怒らせたら特に手を付けられないタイプ。女性Cは超太客というのもあり上手くこの場を落ち着かせたい。どうやって鎮火させよう?",
+    background_image="214.png",
+    gender="male",
+    progress= 0,
+    mental= 0,
+    money= 0,
+    satisfaction= 0,
+    text_set_id=29
+    )
+
 
     session.add(new_text97)
     session.add(new_text98)
@@ -1372,6 +1482,16 @@ def main():
     session.add(new_text202)
     session.add(new_text203)
     session.add(new_text204)
+    session.add(new_text205)
+    session.add(new_text206)
+    session.add(new_text207)
+    session.add(new_text208)
+    session.add(new_text209)
+    session.add(new_text210)
+    session.add(new_text211)
+    session.add(new_text212)
+    session.add(new_text213)
+    session.add(new_text214)
 
 
     # create 2 Choices
