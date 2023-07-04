@@ -1010,47 +1010,161 @@ def main():
     )
 
     new_text83 = Text(
-    
+    text="Takuya:「もちろん最後まで一緒だよ」",
+    background_image="83.png",
+    gender="male",
+    progress= 0,
+    mental= 0,
+    money= 0,
+    satisfaction= 0,
+    text_set_id=16
     )
-    new_text8 = Text(
-    
+
+    new_text84 = Text(
+    text="女性A:「ありがとう!Takuya大好き!」",
+    background_image="84.png",
+    gender="female",
+    progress= 0,
+    mental= 0,
+    money= 0,
+    satisfaction= 0,
+    text_set_id=16
     )
-    new_text8 = Text(
-    
+
+    new_text85 = Text(
+    text="同伴時に今日は最後まで一緒に居ると約束したため、朝4時まで楽しいアフターが続いた。朝6時就寝。この日課題には手をつけられなかった。",
+    background_image="85.png",
+    gender="male",
+    progress= 0,
+    mental= 0,
+    money= 0,
+    satisfaction= 0,
+    text_set_id=16
     )
-    new_text8 = Text(
-    
+
+    new_text86 = Text(
+    text="お金が30万減った。/ 女の子の満足度が20上がった。/ 課題進捗は0のままだ。/ メンタルが10下がった。",
+    background_image="86.png",
+    gender="male",
+    progress= 0,
+    mental= -10,
+    money= -30,
+    satisfaction= 20,
+    text_set_id=16
     )
-    new_text8 = Text(
-    
+
+    new_text87 = Text(
+    text="ひらちん「次の日、起きたら10時27分だ。さてと、Zoomの背景をとよぴーさんに設定して、リモート参加するか。今日は水曜もくもくの日。課題頑張らないとだけどまだ眠たい。。」",
+    background_image="87.png",
+    gender="male",
+    progress= 0,
+    mental= 0,
+    money= 0,
+    satisfaction= 0,
+    text_set_id=16
     )
-    new_text8 = Text(
-    
+
+    new_text88 = Text(
+    text="ひらちん「あ、山崎先生だ!忙しそうだし、質問していいのかなぁ。どうしよう。」",
+    background_image="88.png",
+    gender="male",
+    progress= 0,
+    mental= 0,
+    money= 0,
+    satisfaction= 0,
+    text_set_id=16
     )
-    new_text8 = Text(
-    
+
+    new_text89 = Text(
+    text="ひらちん「あ、山崎先生だ!忙しそうだし、質問していいのかなぁ。どうしよう。」",
+    background_image="89.png",
+    gender="male",
+    progress= 0,
+    mental= 0,
+    money= 0,
+    satisfaction= 0,
+    text_set_id=16
     )
-    new_text9 = Text(
-    
+
+    new_text90 = Text(
+    text="Takuya:「今日課題があるからアフターなしでお願いしたい」",
+    background_image="90.png",
+    gender="male",
+    progress= 0,
+    mental= 0,
+    money= 0,
+    satisfaction= 0,
+    text_set_id=17
     )
-    new_text9 = Text(
-    
+
+    new_text91 = Text(
+    text="女性A:「そっか、仕方ないよね。わかったよ。課題頑張ってね。」",
+    background_image="91.png",
+    gender="female",
+    progress= 0,
+    mental= 0,
+    money= 0,
+    satisfaction= 0,
+    text_set_id=17
     )
-    new_text9 = Text(
-    
+
+    new_text92 = Text(
+    text="本日は女の子の気遣いもあり、アフターがなく帰宅することができた。深夜1時から寝るまでの間、もくもくと課題に取り組んだ。",
+    background_image="92.png",
+    gender="male",
+    progress= 0,
+    mental= 0,
+    money= 0,
+    satisfaction= 0,
+    text_set_id=17
     )
-    new_text9 = Text(
-    
+
+    new_text93 = Text(
+    text="女の子の満足度が10上がった。/ 課題進捗が40%上がった。/ メンタルが20上がった。",
+    background_image="93.png",
+    gender="male",
+    progress= 40,
+    mental= 20,
+    money= 0,
+    satisfaction= 10,
+    text_set_id=17
     )
-    new_text9 = Text(
-    
+
+    new_text94= Text(
+    text="ひらちん「次の日、9時に起床。昨晩はアフターがなかったからよく眠れた。今日は水曜もくもくの日。昨晩エラーが出てしまった部分を山崎先生に聞いて、課題終わらせるぞ!」",
+    background_image="94.png",
+    gender="male",
+    progress= 0,
+    mental= 0,
+    money= 0,
+    satisfaction= 0,
+    text_set_id=17
     )
-    new_text9 = Text(
-    
+
+    new_text95 = Text(
+    text="ひらちん「あ、山崎先生だ!忙しそうだし、質問していいのかなぁ。どうしよう。」",
+    background_image="95.png",
+    gender="male",
+    progress= 0,
+    mental= 0,
+    money= 0,
+    satisfaction= 0,
+    text_set_id=17
     )
-    new_text9 = Text(
-    
+
+    new_text96 = Text(
+    text="ひらちん「あ、山崎先生だ!忙しそうだし、質問していいのかなぁ。どうしよう。」",
+    background_image="96.png",
+    gender="male",
+    progress= 0,
+    mental= 0,
+    money= 0,
+    satisfaction= 0,
+    text_set_id=17
     )
+
+
+
     new_text9 = Text(
     
     )
@@ -1132,6 +1246,34 @@ def main():
     session.add(new_text66)
     session.add(new_text67)
     session.add(new_text68)
+    session.add(new_text69)
+    session.add(new_text70)
+    session.add(new_text81)
+    session.add(new_text82)
+    session.add(new_text83)
+    session.add(new_text84)
+    session.add(new_text85)
+    session.add(new_text86)
+    session.add(new_text87)
+    session.add(new_text88)
+    session.add(new_text89)
+    session.add(new_text90)
+    session.add(new_text91)
+    session.add(new_text92)
+    session.add(new_text93)
+    session.add(new_text94)
+    session.add(new_text95)
+    session.add(new_text96)
+    # session.add(new_text97)
+    # session.add(new_text98)
+    # session.add(new_text99)
+    # session.add(new_text100)
+    # session.add(new_text101)
+    # session.add(new_text102)
+    # session.add(new_text103)
+    # session.add(new_text104)
+    # session.add(new_text105)
+    # session.add(new_text106)
 
     # create 2 Choices
     # new_choice1 = Choice(choice_text="持ってこれるだけ持ってこい", scene_id=new_scene.id)
@@ -1180,6 +1322,18 @@ def main():
     new_choice35 = Choice(choice_text="誕生日だと思うから最後まで付き合うよ", scene_id=1, belong_text_set_id=12)
     new_choice36 = Choice(choice_text="もちろん最後まで一緒だよ", scene_id=1, belong_text_set_id=12)
     new_choice37 = Choice(choice_text="今日課題があるからアフターなしでお願いしたい", scene_id=1, belong_text_set_id=12)
+    new_choice38 = Choice(choice_text="質問する!", scene_id=1, belong_text_set_id=14)
+    new_choice39 = Choice(choice_text="目で訴える", scene_id=1, belong_text_set_id=14)
+    new_choice40 = Choice(choice_text="遠慮しておく", scene_id=1, belong_text_set_id=14)
+    new_choice41 = Choice(choice_text="質問する!", scene_id=1, belong_text_set_id=15)
+    new_choice42 = Choice(choice_text="目で訴える", scene_id=1, belong_text_set_id=15)
+    new_choice43 = Choice(choice_text="遠慮しておく", scene_id=1, belong_text_set_id=15)
+    new_choice44 = Choice(choice_text="質問する!", scene_id=1, belong_text_set_id=16)
+    new_choice45 = Choice(choice_text="目で訴える", scene_id=1, belong_text_set_id=16)
+    new_choice46 = Choice(choice_text="遠慮しておく", scene_id=1, belong_text_set_id=16)
+    new_choice47 = Choice(choice_text="質問する!", scene_id=1, belong_text_set_id=17)
+    new_choice48 = Choice(choice_text="目で訴える", scene_id=1, belong_text_set_id=17)
+    new_choice49 = Choice(choice_text="遠慮しておく", scene_id=1, belong_text_set_id=17)
 
 
 
@@ -1220,6 +1374,18 @@ def main():
     session.add(new_choice35)
     session.add(new_choice36)
     session.add(new_choice37)
+    session.add(new_choice38)
+    session.add(new_choice39)
+    session.add(new_choice40)
+    session.add(new_choice41)
+    session.add(new_choice42)
+    session.add(new_choice43)
+    session.add(new_choice44)
+    session.add(new_choice45)
+    session.add(new_choice46)
+    session.add(new_choice47)
+    session.add(new_choice48)
+    session.add(new_choice49)
     
     session.flush()
 
@@ -1283,6 +1449,32 @@ def main():
     new_choice_text_set47 = ChoiceTextSet(choice_id=new_choice37.id, text_set_id=new_text_set17.id)
 
 
+
+    new_choice_text_set48 = ChoiceTextSet(choice_id=new_choice38.id, text_set_id=new_text_set18.id)
+    new_choice_text_set49 = ChoiceTextSet(choice_id=new_choice38.id, text_set_id=new_text_set19.id)
+    new_choice_text_set50 = ChoiceTextSet(choice_id=new_choice39.id, text_set_id=new_text_set20.id)
+    new_choice_text_set51 = ChoiceTextSet(choice_id=new_choice39.id, text_set_id=new_text_set21.id)
+    new_choice_text_set52 = ChoiceTextSet(choice_id=new_choice40.id, text_set_id=new_text_set22.id)
+
+    new_choice_text_set53 = ChoiceTextSet(choice_id=new_choice41.id, text_set_id=new_text_set23.id)
+    new_choice_text_set54 = ChoiceTextSet(choice_id=new_choice41.id, text_set_id=new_text_set24.id)
+    new_choice_text_set55 = ChoiceTextSet(choice_id=new_choice42.id, text_set_id=new_text_set25.id)
+    new_choice_text_set56 = ChoiceTextSet(choice_id=new_choice42.id, text_set_id=new_text_set26.id)
+    new_choice_text_set57 = ChoiceTextSet(choice_id=new_choice43.id, text_set_id=new_text_set27.id)
+
+    new_choice_text_set58 = ChoiceTextSet(choice_id=new_choice44.id, text_set_id=new_text_set23.id)
+    new_choice_text_set59 = ChoiceTextSet(choice_id=new_choice44.id, text_set_id=new_text_set24.id)
+    new_choice_text_set60 = ChoiceTextSet(choice_id=new_choice45.id, text_set_id=new_text_set25.id)
+    new_choice_text_set61 = ChoiceTextSet(choice_id=new_choice45.id, text_set_id=new_text_set26.id)
+    new_choice_text_set62 = ChoiceTextSet(choice_id=new_choice46.id, text_set_id=new_text_set27.id)
+
+    new_choice_text_set63 = ChoiceTextSet(choice_id=new_choice47.id, text_set_id=new_text_set28.id)
+    new_choice_text_set64 = ChoiceTextSet(choice_id=new_choice47.id, text_set_id=new_text_set29.id)
+    new_choice_text_set65 = ChoiceTextSet(choice_id=new_choice48.id, text_set_id=new_text_set30.id)
+    new_choice_text_set66 = ChoiceTextSet(choice_id=new_choice48.id, text_set_id=new_text_set31.id)
+    new_choice_text_set67 = ChoiceTextSet(choice_id=new_choice49.id, text_set_id=new_text_set32.id)
+
+
     session.add(new_choice_text_set1)
     session.add(new_choice_text_set2)
     session.add(new_choice_text_set3)
@@ -1336,6 +1528,26 @@ def main():
     session.add(new_choice_text_set45)
     session.add(new_choice_text_set46)
     session.add(new_choice_text_set47)
+    session.add(new_choice_text_set48)
+    session.add(new_choice_text_set49)
+    session.add(new_choice_text_set50)
+    session.add(new_choice_text_set51)
+    session.add(new_choice_text_set52)
+    session.add(new_choice_text_set53)
+    session.add(new_choice_text_set54)
+    session.add(new_choice_text_set55)
+    session.add(new_choice_text_set56)
+    session.add(new_choice_text_set57)
+    session.add(new_choice_text_set58)
+    session.add(new_choice_text_set59)
+    session.add(new_choice_text_set60)
+    session.add(new_choice_text_set61)
+    session.add(new_choice_text_set62)
+    session.add(new_choice_text_set63)
+    session.add(new_choice_text_set64)
+    session.add(new_choice_text_set65)
+    session.add(new_choice_text_set66)
+    session.add(new_choice_text_set67)
 
     # commit the session
     session.commit()
