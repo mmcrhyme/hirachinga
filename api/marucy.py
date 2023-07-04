@@ -1703,7 +1703,6 @@ def main():
     text_set_id=32
     )
 
-
     session.add(new_text97)
     session.add(new_text98)
     session.add(new_text99)
