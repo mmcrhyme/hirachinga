@@ -1,10 +1,10 @@
-import Chat from './Chat/Chat';
+import LoadSceneButton from './Chat/LoadSceneButton';
 import Scene from './Chat/Check';
 
 function App() {
   return (
     <>
-      <Scene />
+    <LoadSceneButton />
     </>
   );
 }

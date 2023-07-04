@@ -5,114 +5,6 @@ import Scene from "./Check";
 import { FcSalesPerformance, FcLike, FcPlus } from "react-icons/fc";
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
-// const content = {
-//   "background_image": "./img/scene_1/1.png",
-//   "id": 1,
-//   "choices": [
-//     {
-//       "choice_text": "持ってこれるだけ持ってこいよ！",
-//       "scene_id": 1,
-//       "id": 1,
-//       "text_sets_id":[2]
-//     },
-//     {
-//       "choice_text": "いやぁ、無理しない範囲で大丈夫だよ",
-//       "scene_id": 1,
-//       "id": 2,
-//       "text_sets_id":[2,3]
-//     }
-//   ],
-//   "text_sets": [
-//     {
-//       "id": 1,
-//       "scene_id": 1,
-//       "texts": [
-//         {
-//           "progress": 0,
-//           "text": "ひらちん：「お、今日夕方から同伴予定の女の子Aから連絡だ。」",
-//           "background_image": "1.png",
-//           "mental": 0,
-//           "satisfaction": 0,
-//           "id": 1,
-//           "gender": "male",
-//           "money": 0,
-//           "text_set_id": 1
-//         },
-//         {
-//           "progress": 0,
-//           "text": "女性A：「今日Takuyaに会えるの楽しみー！どれくらいお金持っていけばいいかな？」",
-//           "background_image": "2.png",
-//           "mental": 0,
-//           "satisfaction": 0,
-//           "id": 2,
-//           "gender": "female",
-//           "money": 0,
-//           "text_set_id": 1
-//         },
-//         {
-//           "progress": 0,
-//           "text": "女性A：「今日Takuyaに会えるの楽しみー！どれくらいお金持っていけばいいかな？」",
-//           "background_image": "3.png",
-//           "mental": 0,
-//           "satisfaction": 0,
-//           "id": 3,
-//           "gender": "female",
-//           "money": 0,
-//           "text_set_id": 1
-//         }
-//       ]
-//     },
-//     {
-//       "id": 2,
-//       "scene_id": 1,
-//       "texts": [
-//         {
-//           "progress": 20,
-//           "text": "Takuya：「無理しない範囲で大丈夫だよ」",
-//           "background_image": "4.png",
-//           "mental": 0,
-//           "satisfaction": 0,
-//           "id": 4,
-//           "gender": "male",
-//           "money": -50,
-//           "text_set_id": 2
-//         }
-//       ]
-//     },
-//     {
-//       "id": 3,
-//       "scene_id": 1,
-//       "texts": [
-//         {
-//           "progress": 20,
-//           "text": "Takuya：「無理しない範囲で大丈夫だよ」",
-//           "background_image": "Example background",
-//           "mental": 0,
-//           "satisfaction": 0,
-//           "id": 4,
-//           "gender": "male",
-//           "money": -50,
-//           "text_set_id": 2
-//         },
-//         {
-//           "progress": 20,
-//           "text": "Takuya：「無理しない範囲で大丈夫だよ」",
-//           "background_image": "5.png",
-//           "mental": 0,
-//           "satisfaction": 0,
-//           "id": 4,
-//           "gender": "male",
-//           "money": -50,
-//           "text_set_id": 2
-//         }
-//       ]
-      
-//     }
-//   ],
-
-// };
-
-
 
 const ProgressBar = ({ progress }) => (
   <div style={{ display: 'flex', alignItems: 'center', width: '100%'}}>
@@ -190,10 +82,10 @@ const Messages = ({ content }) => {
     if (currentMessageIndex < content.text_sets[currentTextSetIndex].texts.length) {
       let delay;
       // Check the conditions to set the appropriate delay
-      if(content.id === 1 && content.text_sets.id === 1 && content.text_sets[0].texts[2]) {
-        delay = 25000;
+      if(content.text_sets[0].texts[0].id === 2) {
+        delay = 20000;
       } else {
-        delay = 4000;
+        delay = 5000;
       }
       const timer = setTimeout(() => {
         setMessage(content.text_sets[currentTextSetIndex].texts[currentMessageIndex]);
@@ -223,6 +115,16 @@ const Messages = ({ content }) => {
     }
   }, [message]);
 
+  useEffect(() => {
+
+    if (progress === 100) {
+      window.location.href = 'https://kgrymd.github.io/JFGame/';
+    } else if (money === 0 || mental === 0 || satisfaction === 0) {
+      window.location.href = 'https://kgrymd.github.io/JFGame/game_over_result.html';
+    }
+  }, [progress, money, mental, satisfaction]);  
+  
+
   const messageBoxStyle = {
     borderColor, 
   };
@@ -249,7 +151,7 @@ const Messages = ({ content }) => {
   return (
     <div className="MessagesContainer" style={{ ...backgroundStyle }}>
     <Status progress={progress} money={money} mental={mental} satisfaction={satisfaction} />
-      <div className="MessageBox" style={messageBoxStyle}>
+      <div className= {`MessageBox ${!message && 'hide'}`} style={messageBoxStyle}>
         {message && <Message key={message.id} content={message.text}/>}
       </div>
       {isDisplayingChoices && 
