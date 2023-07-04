@@ -3366,10 +3366,10 @@ def main():
     )
 
     new_text293 = Text(
-    text="お金が200万増えた。/ 女の子の満足度が20上がった。/ メンタルが10下がった。/ 天才プログラマーに課題の相談に乗ってもらった。課題進捗が40%上がった",
+    text="お金が200万増えた。/ 女の子の満足度が20上がった。/ メンタルが10下がった。/ 天才プログラマーに課題の相談に乗ってもらった。課題がとてつもなく進んだ",
     background_image="293.png",
     gender="male",
-    progress= 40,
+    progress= 70,
     mental= -10,
     money= 200,
     satisfaction= 20,
@@ -4069,12 +4069,12 @@ def main():
     new_choice_text_set126 = ChoiceTextSet(choice_id=new_choice79.id, text_set_id=new_text_set33.id)
     new_choice_text_set127 = ChoiceTextSet(choice_id=new_choice79.id, text_set_id=new_text_set34.id)
     new_choice_text_set128 = ChoiceTextSet(choice_id=new_choice80.id, text_set_id=new_text_set35.id)
-    new_choice_text_set129 = ChoiceTextSet(choice_id=new_choice80.id, text_set_id=new_text_set36.id)
-    new_choice_text_set130 = ChoiceTextSet(choice_id=new_choice81.id, text_set_id=new_text_set35.id)
+    new_choice_text_set129 = ChoiceTextSet(choice_id=new_choice80.id, text_set_id=new_text_set35.id)
+    new_choice_text_set130 = ChoiceTextSet(choice_id=new_choice81.id, text_set_id=new_text_set36.id)
     new_choice_text_set131 = ChoiceTextSet(choice_id=new_choice81.id, text_set_id=new_text_set36.id)
     new_choice_text_set132 = ChoiceTextSet(choice_id=new_choice82.id, text_set_id=new_text_set37.id)
-    new_choice_text_set133 = ChoiceTextSet(choice_id=new_choice82.id, text_set_id=new_text_set38.id)
-    new_choice_text_set134 = ChoiceTextSet(choice_id=new_choice83.id, text_set_id=new_text_set37.id)
+    new_choice_text_set133 = ChoiceTextSet(choice_id=new_choice82.id, text_set_id=new_text_set37.id)
+    new_choice_text_set134 = ChoiceTextSet(choice_id=new_choice83.id, text_set_id=new_text_set38.id)
     new_choice_text_set135 = ChoiceTextSet(choice_id=new_choice83.id, text_set_id=new_text_set38.id)
     new_choice_text_set136 = ChoiceTextSet(choice_id=new_choice84.id, text_set_id=new_text_set39.id)
     new_choice_text_set137 = ChoiceTextSet(choice_id=new_choice85.id, text_set_id=new_text_set40.id)
