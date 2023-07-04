@@ -1483,6 +1483,127 @@ def main():
     text_set_id=30
     )
 
+    new_text225 = Text(
+    text="(目で訴える)ひらちん(じーっ。。。じーっ。。。じー's。。。)",
+    background_image="225.png",
+    gender="male",
+    progress= 0,
+    mental= 0,
+    money= 0,
+    satisfaction= 0,
+    text_set_id=31
+    )
+
+    new_text226 = Text(
+    text="(.................。山崎先生もこちらをじーっと見つめ返している。)(山崎先生のテレパシー:「K、僕と悪魔の契約を結ぶか...?」)",
+    background_image="226.png",
+    gender="male",
+    progress= 0,
+    mental= 0,
+    money= 0,
+    satisfaction= 0,
+    text_set_id=31
+    )
+
+    new_text227 = Text(
+    text="山崎先生と悪魔の契約を交わし、山崎先生の目を手に入れた。/ 課題進捗が80%上がった。/ メンタルが60下がった。",
+    background_image="227.png",
+    gender="male",
+    progress= 80,
+    mental= -60,
+    money= 0,
+    satisfaction= 0,
+    text_set_id=31
+    )
+
+    new_text228 = Text(
+    text="Takuya:「今日は20時から1時の営業で、確か指名は女性Bだけ。課題あるから何事もなくアフターなしで帰りたいなぁ。」",
+    background_image="228.png",
+    gender="male",
+    progress= 0,
+    mental= 0,
+    money= 0,
+    satisfaction= 0,
+    text_set_id=31
+    )
+
+    new_text229 = Text(
+    text="Takuya:「あ、いらっしゃい。今日は指名してくれてありがとう。」",
+    background_image="229.png",
+    gender="male",
+    progress= 0,
+    mental= 0,
+    money= 0,
+    satisfaction= 0,
+    text_set_id=31
+    )
+
+    new_text230 = Text(
+    text="女性B:「今日は最初から最後まで指名してるから、ゆっくり話せるの嬉しい♪」",
+    background_image="230.png",
+    gender="female",
+    progress= 0,
+    mental= 0,
+    money= 0,
+    satisfaction= 0,
+    text_set_id=31
+    )
+
+    new_text231 = Text(
+    text="Takuya:「そうだね。じゃああっちの..席...で.......(驚汗)」",
+    background_image="231.png",
+    gender="male",
+    progress= 0,
+    mental= 0,
+    money= 0,
+    satisfaction= 0,
+    text_set_id=31
+    )
+
+    new_text224 = Text(
+    text="女の子2人が目の前で殴り合いのケンカをはじめてしまった。女性Bは割りと優しいから話せばわかってくれるけど、女性Cは怒らせたら特に手を付けられないタイプ。女性Cは超太客というのもあり上手くこの場を落ち着かせたい。どうやって鎮火させよう?",
+    background_image="224.png",
+    gender="male",
+    progress= 0,
+    mental= 0,
+    money= 0,
+    satisfaction= 0,
+    text_set_id=30
+    )
+
+    new_text232 = Text(
+    text="女性C:「ちょっとTakuya〜!1年前からこの日って約束して指名してたのに誰よこいつ。Takuyaは私のものよ〜!!!」",
+    background_image="232.png",
+    gender="female",
+    progress= 0,
+    mental= 0,
+    money= 0,
+    satisfaction= 0,
+    text_set_id=31
+    )
+
+    new_text233 = Text(
+    text="女の子2人が目の前で殴り合いのケンカをはじめてしまった。女性Bは割りと優しいから話せばわかってくれるけど、女性Cは怒らせたら特に手を付けられないタイプ。女性Cは超太客というのもあり上手くこの場を落ち着かせたい。どうやって鎮火させよう?",
+    background_image="233.png",
+    gender="male",
+    progress= 0,
+    mental= 0,
+    money= 0,
+    satisfaction= 0,
+    text_set_id=31
+    )
+
+    new_text234 = Text(
+    text="女の子2人が目の前で殴り合いのケンカをはじめてしまった。女性Bは割りと優しいから話せばわかってくれるけど、女性Cは怒らせたら特に手を付けられないタイプ。女性Cは超太客というのもあり上手くこの場を落ち着かせたい。どうやって鎮火させよう?",
+    background_image="234.png",
+    gender="male",
+    progress= 0,
+    mental= 0,
+    money= 0,
+    satisfaction= 0,
+    text_set_id=31
+    )
+
 
     session.add(new_text97)
     session.add(new_text98)
@@ -1612,6 +1733,16 @@ def main():
     session.add(new_text222)
     session.add(new_text223)
     session.add(new_text224)
+    session.add(new_text225)
+    session.add(new_text226)
+    session.add(new_text227)
+    session.add(new_text228)
+    session.add(new_text229)
+    session.add(new_text230)
+    session.add(new_text231)
+    session.add(new_text232)
+    session.add(new_text233)
+    session.add(new_text234)
 
 
     # create 2 Choices
