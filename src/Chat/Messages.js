@@ -78,27 +78,43 @@ const Messages = ({ content }) => {
     setMessage(null);
   };
 
-  useEffect(() => {
+  const handleClick = () => {
+    if (isDisplayingChoices) {
+      return;
+    }
+    
     if (currentMessageIndex < content.text_sets[currentTextSetIndex].texts.length) {
-      let delay;
-      // Check the conditions to set the appropriate delay
-      if(content.text_sets[0].texts[0].id === 2) {
-        delay = 20000;
-      } else {
-        delay = 5000;
-      }
-      const timer = setTimeout(() => {
-        setMessage(content.text_sets[currentTextSetIndex].texts[currentMessageIndex]);
-        setCurrentMessageIndex(currentMessageIndex => currentMessageIndex + 1);
-        setCurrentTextSetId(content.text_sets[currentTextSetIndex].id); 
-      }, delay); 
-
-      return () => clearTimeout(timer);
-    } else if (!isDisplayingChoices ) {
+      setCurrentMessageIndex(currentMessageIndex + 1);
+      setMessage(content.text_sets[currentTextSetIndex].texts[currentMessageIndex]);
+      setCurrentTextSetId(content.text_sets[currentTextSetIndex].id); 
+    }else if (!isDisplayingChoices ) {
       setChoices(content.choices);
       setIsDisplayingChoices(true);
     }
-  }, [currentMessageIndex, isDisplayingChoices, currentTextSetIndex]);
+  };
+
+  useEffect(() => {
+    if (!isDisplayingChoices && message === null) {
+      if (currentMessageIndex < content.text_sets[currentTextSetIndex].texts.length) {
+        setCurrentMessageIndex(currentMessageIndex + 1);
+        setMessage(content.text_sets[currentTextSetIndex].texts[currentMessageIndex]);
+        setCurrentTextSetId(content.text_sets[currentTextSetIndex].id); 
+      }
+    }
+  }, [isDisplayingChoices, message, currentMessageIndex, content, currentTextSetIndex]);
+  
+
+  // useEffect(() => {
+  //   if (currentMessageIndex < content.text_sets[currentTextSetIndex].texts.length) {
+  //       setMessage(content.text_sets[currentTextSetIndex].texts[currentMessageIndex]);
+  //       setCurrentTextSetId(content.text_sets[currentTextSetIndex].id); 
+  //   } else if (!isDisplayingChoices ) {
+  //     setChoices(content.choices);
+  //     setIsDisplayingChoices(true);
+  //   }
+  // }, [currentMessageIndex, isDisplayingChoices, currentTextSetIndex]);
+
+
   useEffect(() => {
     if (message) {
       setBorderColor(message.gender === 'male' ? 'blue' : 'red');
@@ -151,7 +167,7 @@ const Messages = ({ content }) => {
   return (
     <div className="MessagesContainer" style={{ ...backgroundStyle }}>
     <Status progress={progress} money={money} mental={mental} satisfaction={satisfaction} />
-      <div className= {`MessageBox ${!message && 'hide'}`} style={messageBoxStyle}>
+      <div className= {`MessageBox`} style={messageBoxStyle} onClick={handleClick}>
         {message && <Message key={message.id} content={message.text}/>}
       </div>
       {isDisplayingChoices && 
