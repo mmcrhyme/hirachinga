@@ -25,14 +25,32 @@ def main():
     new_text_set7 = TextSet(scene_id=new_scene.id)
     new_text_set8 = TextSet(scene_id=new_scene.id)
     new_text_set9 = TextSet(scene_id=new_scene.id)
-    new_text_set10 = TextSet(scene_id=new_scene.id)
-    new_text_set11 = TextSet(scene_id=new_scene.id)
-    new_text_set12 = TextSet(scene_id=new_scene.id)
+    new_text_set10 = TextSet(scene_id=1)
+    new_text_set11 = TextSet(scene_id=1)
+    new_text_set12 = TextSet(scene_id=1)
     new_text_set13 = TextSet(scene_id=1)
     new_text_set14 = TextSet(scene_id=1)
     new_text_set15 = TextSet(scene_id=1)
     new_text_set16 = TextSet(scene_id=1)
     new_text_set17 = TextSet(scene_id=1)
+    new_text_set18 = TextSet(scene_id=1)
+    new_text_set19 = TextSet(scene_id=1)
+    new_text_set20 = TextSet(scene_id=1)
+    new_text_set21 = TextSet(scene_id=1)
+    new_text_set22 = TextSet(scene_id=1)
+    new_text_set23 = TextSet(scene_id=1)
+    new_text_set24 = TextSet(scene_id=1)
+    new_text_set25 = TextSet(scene_id=1)
+    new_text_set26 = TextSet(scene_id=1)
+    new_text_set27 = TextSet(scene_id=1)
+    new_text_set28 = TextSet(scene_id=1)
+    new_text_set29 = TextSet(scene_id=1)
+    new_text_set30 = TextSet(scene_id=1)
+    new_text_set31 = TextSet(scene_id=1)
+    new_text_set32 = TextSet(scene_id=1)
+    
+
+
     session.add(new_text_set1)
     session.add(new_text_set2)
     session.add(new_text_set3)
@@ -50,6 +68,21 @@ def main():
     session.add(new_text_set15)
     session.add(new_text_set16)
     session.add(new_text_set17)
+    session.add(new_text_set18)
+    session.add(new_text_set19)
+    session.add(new_text_set20)
+    session.add(new_text_set21)
+    session.add(new_text_set22)
+    session.add(new_text_set23)
+    session.add(new_text_set24)
+    session.add(new_text_set25)
+    session.add(new_text_set26)
+    session.add(new_text_set27)
+    session.add(new_text_set28)
+    session.add(new_text_set29)
+    session.add(new_text_set30)
+    session.add(new_text_set31)
+    session.add(new_text_set32)
     session.flush()
 
     # text_sets = []
@@ -822,9 +855,205 @@ def main():
     text_set_id=12
     )
 
-    # new_text69 = Text(
+    new_text69 = Text(
+    text="Takuya:「1時間だけならOK」",
+    background_image="69.png",
+    gender="male",
+    progress= 0,
+    mental= 0,
+    money= 0,
+    satisfaction= 0,
+    text_set_id=14
+    )
+
+    new_text70 = Text(
+    ext="女性A:「おっけー。1時間だけでも嬉しい。楽しもうね。」",
+    background_image="70.png",
+    gender="female",
+    progress= 0,
+    mental= 0,
+    money= 0,
+    satisfaction= 0,
+    text_set_id=14
+    )
+
+    new_text71 = Text(
+    text="本日はアフターが1時間で終わった。帰宅後、課題に少し取り組めた。",
+    background_image="71.png",
+    gender="male",
+    progress= 0,
+    mental= 0,
+    money= 0,
+    satisfaction= 0,
+    text_set_id=14
+    )
+
+    new_text72 = Text(
+    text="お金が30万減った。/ 女の子の満足度が10上がった。/ 課題進捗が20%上がっ﻿た。/ メンタルが10減った。",
+    background_image="72.png",
+    gender="male",
+    progress= 20,
+    mental= -10,
+    money= -30,
+    satisfaction= 10,
+    text_set_id=14
+    )
+
+    new_text73 = Text(
+    text="ひらちん「次の日、俺はなんとか9時に起床してジーズにきた。今日は水曜もくもくの日。集中して課題を終わらせる気持ちで頑張るぞ!」",
+    background_image="73.png",
+    gender="male",
+    progress= 0,
+    mental= 0,
+    money= 0,
+    satisfaction= 0,
+    text_set_id=14
+    )
+
+    new_text74 = Text(
+    text="ひらちん「あ、山崎先生だ!忙しそうだし、質問していいのかなぁ。どうしよう。」",
+    background_image="74.png",
+    gender="male",
+    progress= 0,
+    mental= 0,
+    money= 0,
+    satisfaction= 0,
+    text_set_id=14
+    )
+
+    new_text75 = Text(
+    text="ひらちん「あ、山崎先生だ!忙しそうだし、質問していいのかなぁ。どうしよう。」",
+    background_image="75.png",
+    gender="male",
+    progress= 0,
+    mental= 0,
+    money= 0,
+    satisfaction= 0,
+    text_set_id=14
+    )
+
+    new_text76 = Text(
+    text="Takuya:「誕生日だと思うから最後まで付き合うよ」",
+    background_image="76.png",
+    gender="male",
+    progress= 0,
+    mental= 0,
+    money= 0,
+    satisfaction= 0,
+    text_set_id=15
+    )
+
+    new_text77 = Text(
+    text="女性A:「私の誕生日忘れてたくせに調子のいいこといっちゃって。当たり前でしょ。」",
+    background_image="77.png",
+    gender="female",
+    progress= 0,
+    mental= 0,
+    money= 0,
+    satisfaction= 0,
+    text_set_id=15
+    )
+
+    new_text78 = Text(
+    text="誕生日忘れていたことを根に持たれ、慰めるために結局朝4時までアフターが続いた。朝6時就寝。この日課題には手をつけられなかった。",
+    background_image="78.png",
+    gender="male",
+    progress= 0,
+    mental= 0,
+    money= 0,
+    satisfaction= 0,
+    text_set_id=15
+    )
+
+    new_text79 = Text(
+    text="お金が50万減った。/ 女の子の満足度が10﻿上がった。/ 課題進捗は0のままだ。/ メンタルが20下がった。",
+    background_image="79.png",
+    gender="male",
+    progress= 0,
+    mental= -20,
+    money= -50,
+    satisfaction= 10,
+    text_set_id=15
+    )
+
+    new_text80 = Text(
+    text="ひらちん「次の日、起きたら10時27分だ。さてと、Zoomの背景をとよぴーさんに設定して、リモート参加するか。今日は水曜もくもくの日。課題頑張らないとだけどまだ眠たい。。」",
+    background_image="80.png",
+    gender="male",
+    progress= 0,
+    mental= 0,
+    money= 0,
+    satisfaction= 0,
+    text_set_id=15
+    )
+
+    new_text81 = Text(
+    ext="ひらちん「あ、山崎先生だ!忙しそうだし、質問していいのかなぁ。どうしよう。」",
+    background_image="81.png",
+    gender="male",
+    progress= 0,
+    mental= 0,
+    money= 0,
+    satisfaction= 0,
+    text_set_id=15
+    )
+
+    new_text82 = Text(
+    text="ひらちん「あ、山崎先生だ!忙しそうだし、質問していいのかなぁ。どうしよう。」",
+    background_image="82.png",
+    gender="male",
+    progress= 0,
+    mental= 0,
+    money= 0,
+    satisfaction= 0,
+    text_set_id=15
+    )
+
+    new_text83 = Text(
     
-    # )
+    )
+    new_text8 = Text(
+    
+    )
+    new_text8 = Text(
+    
+    )
+    new_text8 = Text(
+    
+    )
+    new_text8 = Text(
+    
+    )
+    new_text8 = Text(
+    
+    )
+    new_text8 = Text(
+    
+    )
+    new_text9 = Text(
+    
+    )
+    new_text9 = Text(
+    
+    )
+    new_text9 = Text(
+    
+    )
+    new_text9 = Text(
+    
+    )
+    new_text9 = Text(
+    
+    )
+    new_text9 = Text(
+    
+    )
+    new_text9 = Text(
+    
+    )
+    new_text9 = Text(
+    
+    )
 
 
 
