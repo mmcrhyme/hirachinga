@@ -126,8 +126,8 @@ const Messages = ({ content }) => {
     if (message) {
       setProgress(prevProgress => prevProgress + message.progress);
       setMoney(prevMoney => prevMoney + message.money);
-      setMental(prevMental => prevMental + message.mental);
-      setSatisfaction(prevSatisfaction => prevSatisfaction + message.satisfaction);
+      setMental(prevMental => prevMental + message.satisfaction);
+      setSatisfaction(prevSatisfaction => prevSatisfaction + message.mental); //謎だけどメンタル
     }
   }, [message]);
 
